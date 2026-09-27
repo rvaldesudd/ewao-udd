@@ -1,6 +1,6 @@
 # Landings EWAO
 
-> Esta carpeta contiene las landing pages existentes del proyecto EWAO.
+> Landing pages del proyecto EWAO, extraídas del backup del servidor (Plesk, 27-09-2026) y preparadas para correr localmente.
 
 ---
 
@@ -8,37 +8,48 @@
 
 ```
 landings/
-├── estatico/       → Sitio HTML estático (código recibido mañana)
-└── wordpress/      → Instalación WordPress con Docker (código recibido mañana)
+├── wordpress/       → Sitio WordPress (ewaoproject.com) con Docker — ver su README.md
+└── landing-2026/    → Landing estática actual (producción) — ver su README.md
 ```
 
-## Sitio estático
+## Sitio estático (`landing-2026/`)
 
-Aquí se alojará la versión HTML estático actual de EWAO. Los grupos podrán:
+Es la landing **actual en producción** (document root `site2026` del servidor). Sitio HTML/CSS/JS generado con Vite, donde cada sublanding es una carpeta con su `index.html`: `/sobreewao/`, `/modeloewao/`, `/financiacion/`, `/experiencia/`, `/voluntariado/`.
 
-- Correrlo localmente
-- Proponer mejoras a la UI/UX
-- Integrar formularios y automatizaciones
-- Testear cambios antes de producción
+- Corre con `docker compose up -d` (nginx, puerto 80) o cualquier servidor estático
+- Incluye `_backups/` con 3 versiones anteriores del sitio
+- Los grupos podrán proponer mejoras de UI/UX, integrar formularios y automatizaciones
 
-## WordPress (Docker)
+## WordPress (`wordpress/`)
 
-La instalación de WordPress estará disponible mediante Docker Compose para que todos los grupos puedan:
+Réplica local completa del WordPress de ewaoproject.com (WP 7.1.2, PHP 8.4, MariaDB 10.11, theme Enfold, ~3.100 archivos de medios). Corre con **un solo comando**:
 
-- Correr WordPress localmente
+```bash
+cd wordpress
+docker compose up -d
+# → http://localhost:8082 (sitio) · http://localhost:8081 (phpMyAdmin)
+# → WP-Admin: Udd-Ewao / EwaoLocal2026! (más detalles en wordpress/README.md)
+```
+
+Los grupos podrán:
+
+- Correrlo localmente y explorar el contenido real
 - Proponer plugins (formularios, SEO, multilingüe)
 - Testear themes y layouts
 - Desarrollar en un entorno que replica producción
 
-## Setup inicial (se completará mañana)
+## Distribución a los grupos
 
-Una vez recibido el código, se documentará en cada subcarpeta:
+| Carpeta | Peso aprox. | Vía |
+|---|---|---|
+| `wordpress/` | ~1 GB (uploads + BD) | **ZIP** (Drive/Drive UDD). Las partes pesadas están excluidas de git vía `.gitignore`. |
+| `landing-2026/` | ~160 MB (videos) | ZIP o git (revisar límite de 100 MB por archivo en GitHub para los .mp4) |
 
-1. **Requisitos** (PHP, Docker, etc.)
-2. **Instrucciones de instalación** paso a paso
-3. **Credenciales de acceso** (admin WordPress)
-4. **Estructura del proyecto** (qué archivo hace qué)
-5. **Puntos de integración** con el resto del ecosistema
+## Notas de origen y seguridad
+
+- Fuente: `backup.tar` (backup Plesk del dominio ewaoproject.com, 27-09-2026). Ese archivo **contiene llaves privadas del servidor** (SSH, SSL) y contraseñas de sistema: **no distribuirlo** — solo las carpetas ya preparadas.
+- En el servidor, la carpeta `bakcup1/httpdocs/` era una copia idéntica del WordPress: se omitió en la extracción.
+- La carpeta `wordpress/db/ewaoproject-original.sql` es el dump tal cual producción (URLs `ewaoproject.com`); el que se importa localmente es `db/init/ewaoproject-local.sql` (URLs `localhost:8082`, admin reseteado).
 
 ## Integración con los grupos
 
@@ -54,4 +65,4 @@ Una vez recibido el código, se documentará en cada subcarpeta:
 
 ---
 
-**Estado:** Esperando código de ambas landings para completar setup.
+**Estado:** Ambas landings extraídas, probadas y documentadas (27-09-2026).

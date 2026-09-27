@@ -1,0 +1,235 @@
+Components: package_component_db, package_component_core, package_component_plugins, package_component_themes, package_component_uploads, package_component_other
+Scan chunk complete.
+TABLES: total: 19 | filtered:0 | create:19
+********************************************************************************
+********************************************************************************
+DUPLICATOR PRO PACKAGE-LOG: 2026-05-26 01:45:23
+NOTICE: Do NOT post to public sites or forums 
+PACKAGE CREATION START
+********************************************************************************
+********************************************************************************
+VERSION:	4.5.25.3
+WORDPRESS:	7.0
+PHP INFO:	8.4.21 | SAPI: fpm-fcgi
+SERVER:		nginx/1.30.1 
+ARCHITECTURE:	64-bit 
+CLIENT KICKOFF: off 
+PHP TIME LIMIT: [7200] not allowed 
+PHP MAX MEMORY: 256M (256M default) 
+RUN TYPE:	Programar
+MEMORY STACK:	48.07MB
+ARCHIVE ENGINE: Shell Zip
+PACKAGE COMPONENTS:
+	Database,
+	Core,
+	Plugins,
+	Themes,
+	Media,
+	Other
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP + CHUNKING (query size limit - 131072 )
+
+TABLES: total: 19 | filtered:0 | create:19
+REWIND DATABASE ITERATOR
+INSERT ROWS TABLE[INDEX:0] aN8Ujwxov_users NUM ROWS: 5
+REWIND DATABASE ITERATOR
+INSERT ROWS TABLE[INDEX:0] aN8Ujwxov_users NUM ROWS: 5
+INSERT ROWS TABLE[INDEX:1] aN8Ujwxov_usermeta NUM ROWS: 112
+INSERT ROWS TABLE[INDEX:2] aN8Ujwxov_commentmeta NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:3] aN8Ujwxov_comments NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:4] aN8Ujwxov_duplicator_activity_logs NUM ROWS: 53
+INSERT ROWS TABLE[INDEX:5] aN8Ujwxov_duplicator_backups NUM ROWS: 7
+INSERT ROWS TABLE[INDEX:6] aN8Ujwxov_duplicator_entities NUM ROWS: 12
+INSERT ROWS TABLE[INDEX:7] aN8Ujwxov_layerslider NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:8] aN8Ujwxov_layerslider_drafts NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:9] aN8Ujwxov_layerslider_revisions NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:10] aN8Ujwxov_links NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:11] aN8Ujwxov_options NUM ROWS: 355
+INSERT ROWS TABLE[INDEX:12] aN8Ujwxov_postmeta NUM ROWS: 3638
+INSERT ROWS TABLE[INDEX:13] aN8Ujwxov_posts NUM ROWS: 698
+INSERT ROWS TABLE[INDEX:14] aN8Ujwxov_termmeta NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:15] aN8Ujwxov_terms NUM ROWS: 12
+INSERT ROWS TABLE[INDEX:16] aN8Ujwxov_term_relationships NUM ROWS: 9
+INSERT ROWS TABLE[INDEX:17] aN8Ujwxov_term_taxonomy NUM ROWS: 12
+INSERT ROWS TABLE[INDEX:18] aN8Ujwxov_wpfm_backup NUM ROWS: 0
+SQL FILE SIZE CHECK OK, SIZE: 94073522
+SQL CREATED: 20260526_ewaoproject_85c984d5dff83d116798_20260526014521_database.sql
+SQL FILE SIZE: 89.72MB
+SQL FILE TIME: 2026-05-26 01:45:24
+SQL RUNTIME: 1.549 seg.
+MEMORY STACK: 48.07MB
+
+********************************************************************************
+ARCHIVE  Type=ZIP Mode=Shell
+********************************************************************************
+ARCHIVE DIR:  /var/www/vhosts/ewaoproject.com/httpdocs
+ARCHIVE FILE: 20260526_ewaoproject_85c984d5dff83d116798_20260526014521_archive.zip
+FILTERS: *OFF*
+DIRS:  not set
+EXTS:  not set
+FILES:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	811.02MB
+STATS:	Dirs 1,449 | Files 12,606 | Total 14,055
+SHELL COMMAND: cd '/var/www/vhosts/ewaoproject.com/httpdocs' && zip -6 -rq '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/duplicator-backups/tmp/20260526_ewaoproject_85c984d5dff83d116798_20260526014521_archive.zip' ./ -x .opcache**\* .opcache .tmb**\* .tmb wp\-content/ai1wm\-backups**\* wp\-content/ai1wm\-backups wp\-content/backups\-dup\-lite**\* wp\-content/backups\-dup\-lite wp\-content/backups\-dup\-pro**\* wp\-content/backups\-dup\-pro wp\-content/backupwordpress**\* wp\-content/backupwordpress wp\-content/bps\-backup**\* wp\-content/bps\-backup wp\-content/cache**\* wp\-content/cache wp\-content/content/cache**\* wp\-content/content/cache wp\-content/contents/cache**\* wp\-content/contents/cache wp\-content/duplicator\-backups**\* wp\-content/duplicator\-backups wp\-content/infinitewp/backups**\* wp\-content/infinitewp/backups wp\-content/managewp/backups**\* wp\-content/managewp/backups wp\-content/old\-cache**\* wp\-content/old\-cache wp\-content/plugins/all\-in\-one\-wp\-migration/storage**\* wp\-content/plugins/all\-in\-one\-wp\-migration/storage wp\-content/plugins/really\-simple\-captcha/tmp**\* wp\-content/plugins/really\-simple\-captcha/tmp wp\-content/plugins/wordfence/tmp**\* wp\-content/plugins/wordfence/tmp wp\-content/updraft**\* wp\-content/updraft wp\-content/uploads/aiowps_backups**\* wp\-content/uploads/aiowps_backups wp\-content/uploads/backup\-guard**\* wp\-content/uploads/backup\-guard wp\-content/uploads/backupbuddy_backups**\* wp\-content/uploads/backupbuddy_backups wp\-content/uploads/backupbuddy_temp**\* wp\-content/uploads/backupbuddy_temp wp\-content/uploads/ithemes\-security/backups**\* wp\-content/uploads/ithemes\-security/backups wp\-content/uploads/mainwp/backup**\* wp\-content/uploads/mainwp/backup wp\-content/uploads/pb_backupbuddy**\* wp\-content/uploads/pb_backupbuddy wp\-content/uploads/snapshots**\* wp\-content/uploads/snapshots wp\-content/uploads/sucuri**\* wp\-content/uploads/sucuri wp\-content/uploads/wp\-clone**\* wp\-content/uploads/wp\-clone wp\-content/uploads/wp_all_backup**\* wp\-content/uploads/wp_all_backup wp\-content/uploads/wpbackitup_backups**\* wp\-content/uploads/wpbackitup_backups wp\-content/wfcache**\* wp\-content/wfcache wp\-content/wishlist\-backup**\* wp\-content/wishlist\-backup wp\-content/wpvividbackups**\* wp\-content/wpvividbackups wp\-snapshots**\* wp\-snapshots ".DS_Store" ".htaccess" ".user.ini" "php.ini" "web.config" "wp-config.php" "wp-content/debug.log" "dbcache" "debug_log" "error_log" "objectcache" "pgcache" "ws_ftp.log" wp-content/duplicator-backups**\*  2>&1
+COMPRESSED SIZE: 610.41MB
+ARCHIVE RUNTIME: 15.606 seg.
+MEMORY STACK: 48.07MB
+EXECUTING SHELL COMMAND
+SHELL COMMAND: cd '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/duplicator-backups/tmp/extras/' && zip -6 -g -rq '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/duplicator-backups/tmp/20260526_ewaoproject_85c984d5dff83d116798_20260526014521_archive.zip' .[!.]* * -x "index.php"
+CHECK FILES Array
+(
+    [0] => dup-installer/api/class.api.php
+    [1] => dup-installer/assets/index.php
+    [2] => dup-installer/classes/index.php
+    [3] => dup-installer/ctrls/index.php
+    [4] => dup-installer/src/Utils/Autoloader.php
+    [5] => dup-installer/templates/default/page-help.php
+    [6] => dup-installer/main.installer.php
+    [7] => 20260526_ewaoproject_85c984d5dff83d116798_20260526014521_installer-backup.php
+    [8] => dup-installer/index.php
+    [9] => dup-installer/libs/Snap/index.php
+    [10] => dup-installer/assets/font-awesome/index.php
+    [11] => dup-installer/dup_descriptors_85c984d-26014521/archive.txt
+    [12] => dup-installer/dup_descriptors_85c984d-26014521/scan.json
+    [13] => dup-installer/dup_descriptors_85c984d-26014521/index.txt
+    [14] => dup-installer/dup_descriptors_85c984d-26014521/manual-extract
+    [15] => dup-installer/dup_descriptors_85c984d-26014521/db_dumps/20260526014521-dump.sql
+)
+
+Executing extra count string unzip -Z1 '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/duplicator-backups/tmp/20260526_ewaoproject_85c984d5dff83d116798_20260526014521_archive.zip' | grep '^\(dup-installer/api/class.api.php\|dup-installer/assets/index.php\|dup-installer/classes/index.php\|dup-installer/ctrls/index.php\|dup-installer/src/Utils/Autoloader.php\|dup-installer/templates/default/page-help.php\|dup-installer/main.installer.php\|20260526_ewaoproject_85c984d5dff83d116798_20260526014521_installer-backup.php\|dup-installer/index.php\|dup-installer/libs/Snap/index.php\|dup-installer/assets/font-awesome/index.php\|dup-installer/dup_descriptors_85c984d-26014521/archive.txt\|dup-installer/dup_descriptors_85c984d-26014521/scan.json\|dup-installer/dup_descriptors_85c984d-26014521/index.txt\|dup-installer/dup_descriptors_85c984d-26014521/manual-extract\|dup-installer/dup_descriptors_85c984d-26014521/db_dumps/20260526014521-dump.sql\)' | wc -l
+
+********************************************************************************
+STORAGE:
+********************************************************************************
+ONEDRIVE: onedrive, https://onedrive.live.com?cid=46949CD8FBF7C90D&id=46949CD8FBF7C90D!sad4c9147cdc5487194a03c93967dafcd
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 89.72MB
+INSTALLER FILE: 127.67KB
+ARCHIVE FILE: 621.48MB 
+RECUENTO ARCHIVOS/DIRECTORIOS ESPERADOS: 14,055
+RECUENTO ARCHIVOS/DIRECTORIOS ACTUALES: 14,057
+
+********************************************************************************
+RECORD ID:[42]
+TOTAL PROCESS RUNTIME: 19.199 seg.
+PEAK PHP MEMORY USED: 48.2MB
+DONE PROCESSING => 20260526_ewaoproject 2026-05-26 01:45:42
+
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: []
+Created upload session for 20260526_ewaoproject_85c984d5dff83d116798_20260526014521_installer.php, current session is: Array
+(
+    [385fbd97160b01e8d2c8e31a1b2c47c4] => Array
+        (
+            [@odata.context] => https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.uploadSession
+            [expirationDateTime] => 2026-05-26T02:00:44.976Z
+            [nextExpectedRanges] => Array
+                (
+                    [0] => 0-
+                )
+
+            [uploadUrl] => https://my.microsoftpersonalcontent.com/personal/46949cd8fbf7c90d/_api/v2.0/drive/items/01EIKHV4I57X423TQ65NHK3RER4EMOL4KD/uploadSession?guid='61740e10-8603-420b-913a-3097239b4499'&overwrite=True&rename=False&dc=0&tempauth=v1e.eyJzaXRlaWQiOiI3ZjVjMGU5Ni1lMGI2LTQ4NWItYWY4NC1lZWQ0ZTYyMzU5ZTIiLCJhcHBfZGlzcGxheW5hbWUiOiJEdXBsaWNhdG9yIFBybyIsImFwcGlkIjoiY2UzYWJjYzgtYjU4OC00ZmRjLWI4NGQtM2U2MTU1NTJiMjI3IiwiYXVkIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL215Lm1pY3Jvc29mdHBlcnNvbmFsY29udGVudC5jb21AOTE4ODA0MGQtNmM2Ny00YzViLWIxMTItMzZhMzA0YjY2ZGFkIiwiZXhwIjoiMTc3OTg0NjM0NSJ9.xPHl81Nrt_10UfjuHhB3INO6vaMcdGkuk6Zgfvhc51jLRNu_v9peeWpYlaWPFu3lUK6sj9fu5u1OpJyDIrQXJEMEMpmso9QukmjUBhMitil3duxMnw6Mv1YmZbLZDrsoE0pIxjoo45gYvS3PvmEsRD1kma1W0a0TneXej7jJXPXgogjP_Ls-oinOKG9ZqsVgoemLmpMwKXfmn4hQjpSUi0QUyiAYQLBE9kYOSS1FPg2mVoAk45QuozhjwZ8fh3_-8fuVtc6NOVTh3Kndq11AvaPxVP6oVis7jqu9DK9FgpquxN0z6UAxg99IUlgip0JB7WA1aBl1XBHh1P76JIdDBHcKQx0B4ffso9xYAdJjgZjsLNKhi5CrbJQjzxmeUTn8RWbsLp7QFnMb2GfIoRPrgnjzFIKCi-iHt5PdHMj1eos6wNpi3bh8zzPh9eTRsJYF.pUcAHRrUEctcdPxIjYiEARSTw2rEZfInQoFIwNxysRc
+        )
+
+)
+
+Created upload session for 20260526_ewaoproject_85c984d5dff83d116798_20260526014521_archive.zip, current session is: Array
+(
+    [13e9011001c57fde84db614c0a3ca682] => Array
+        (
+            [@odata.context] => https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.uploadSession
+            [expirationDateTime] => 2026-05-26T02:00:48.272Z
+            [nextExpectedRanges] => Array
+                (
+                    [0] => 0-
+                )
+
+            [uploadUrl] => https://my.microsoftpersonalcontent.com/personal/46949cd8fbf7c90d/_api/v2.0/drive/items/01EIKHV4L3R6HSHM362JGZ4MG5LDKCBAHS/uploadSession?guid='a8fd755d-92bb-4920-8ec5-d6c4e2092814'&overwrite=True&rename=False&dc=0&tempauth=v1e.eyJzaXRlaWQiOiI3ZjVjMGU5Ni1lMGI2LTQ4NWItYWY4NC1lZWQ0ZTYyMzU5ZTIiLCJhcHBfZGlzcGxheW5hbWUiOiJEdXBsaWNhdG9yIFBybyIsImFwcGlkIjoiY2UzYWJjYzgtYjU4OC00ZmRjLWI4NGQtM2U2MTU1NTJiMjI3IiwiYXVkIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL215Lm1pY3Jvc29mdHBlcnNvbmFsY29udGVudC5jb21AOTE4ODA0MGQtNmM2Ny00YzViLWIxMTItMzZhMzA0YjY2ZGFkIiwiZXhwIjoiMTc3OTg0NjM0OCJ9.cD8PjSYzLkyS-vm9gF-HHZUSHnDIgpZwxS0teAGvsQW_Q41jrCp9gleWBDYUbEubjlRUGVfC_WXQbL_qqhmxLjmIoFXHpIxUyj-3GiQwlOUN6xpOcR35DM67h6QU29BKMeLpcAEYlYdsNzPR3ztINtQGjeSBBPS2c6FKErR70Se-wa5tFAHRJb_Odh15EGJC7EOzc1bI3lbJ-KVbm9J8-71_Qz0Gq-qeNLfG3KVFAaxTty23gdOZUPBDqUMowXvu4Fa-gITetyEwTdPfGvI6Iw3ijMD1LejkmoEvz39FsNUV8pKIOfEUq6PaIxj6bs09Ou0ll5K9LgZ8EN_-pddvdzPt106CqhdFjvl31w3Oi5S3h6ed2Bqq-sfiiAVSpR2WVNxKydEm_fq6-IRHG6rUXaSgUoL3TFdPElgplBZWdjPLbaimXU3idF19LYa1Pc30.v86ioWkGfE02GY0jKrFfi5yen89V-nkZTZ6WS5iHom0
+        )
+
+)
+
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,65536000]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,131072000]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,196608000]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,268697600]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,314572800]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,386662400]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,458752000]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,527564800]
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** ONEDRIVE [Name: onedrive] [ID: 8] **
+Copying to Storage onedrive[ID: 8] [TYPE:OneDrive] POS: [1,599654400]
+UPLOAD IN CHUNKS COMPLETED
+-----------------------------------------
+
+Attempting to purge old Backups at onedrive[ID: 8] type: OneDrive
+Purge of old Backups at onedrive[ID: 8] storage completed. Num packages deleted 0
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+STORAGE PROCESSING THREAD FINISHED
+-----------------------------------------
+STORAGE PROCESSING COMPLETED
+
+********************************************************************************
+********************************************************************************
+DUPLICATOR PRO PACKAGE CREATION OR MANUAL STORAGE TRANSFER END: 2026-05-26 01:49:22
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+********************************************************************************
+
