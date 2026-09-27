@@ -1,0 +1,12 @@
+name: ewao-landing-2026
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: ewao_landing
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-80}:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro

@@ -23,11 +23,11 @@ Thumbs.db
 dist/
 build/
 
-# WordPress (cuando exista)
-landings/wordpress/wp-content/uploads/
-landings/wordpress/wp-content/cache/
-landings/wordpress/.htaccess
-landings/wordpress/wp-config.php
+# WordPress (réplica local: ver landings/wordpress/README.md)
+landings/wordpress/html/wp-content/uploads/
+landings/wordpress/html/wp-content/cache/
+landings/wordpress/html/.htaccess
+landings/wordpress/html/wp-config.php
 
 # Docker
 landings/wordpress/.docker/

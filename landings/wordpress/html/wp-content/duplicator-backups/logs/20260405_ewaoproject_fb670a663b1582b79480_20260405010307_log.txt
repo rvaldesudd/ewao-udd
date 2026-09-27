@@ -1,0 +1,159 @@
+********************************************************************************
+********************************************************************************
+DUPLICATOR PRO PACKAGE-LOG: 2026-04-05 01:03:09
+NOTICE: Do NOT post to public sites or forums 
+PACKAGE CREATION START
+********************************************************************************
+********************************************************************************
+VERSION:	4.5.21.5
+WORDPRESS:	6.9.4
+PHP INFO:	8.4.19 | SAPI: fpm-fcgi
+SERVER:		nginx/1.28.2 
+ARCHITECTURE:	64-bit 
+CLIENT KICKOFF: off 
+PHP TIME LIMIT: [7200] not allowed 
+PHP MAX MEMORY: 256M (256M default) 
+RUN TYPE:	Programar
+MEMORY STACK:	45.84MB
+ARCHIVE ENGINE: Shell Zip
+PACKAGE COMPONENTS:
+	Database,
+	Core,
+	Plugins,
+	Themes,
+	Media,
+	Other
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP + CHUNKING (query size limit - 131072 )
+
+TABLES: total: 18 | filtered:0 | create:18
+REWIND DATABASE ITERATOR
+INSERT ROWS TABLE[INDEX:0] aN8Ujwxov_users NUM ROWS: 5
+REWIND DATABASE ITERATOR
+INSERT ROWS TABLE[INDEX:0] aN8Ujwxov_users NUM ROWS: 5
+INSERT ROWS TABLE[INDEX:1] aN8Ujwxov_usermeta NUM ROWS: 111
+INSERT ROWS TABLE[INDEX:2] aN8Ujwxov_commentmeta NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:3] aN8Ujwxov_comments NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:4] aN8Ujwxov_duplicator_backups NUM ROWS: 33
+INSERT ROWS TABLE[INDEX:5] aN8Ujwxov_duplicator_entities NUM ROWS: 12
+INSERT ROWS TABLE[INDEX:6] aN8Ujwxov_layerslider NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:7] aN8Ujwxov_layerslider_drafts NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:8] aN8Ujwxov_layerslider_revisions NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:9] aN8Ujwxov_links NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:10] aN8Ujwxov_options NUM ROWS: 354
+INSERT ROWS TABLE[INDEX:11] aN8Ujwxov_postmeta NUM ROWS: 3631
+INSERT ROWS TABLE[INDEX:12] aN8Ujwxov_posts NUM ROWS: 697
+INSERT ROWS TABLE[INDEX:13] aN8Ujwxov_termmeta NUM ROWS: 0
+INSERT ROWS TABLE[INDEX:14] aN8Ujwxov_terms NUM ROWS: 12
+INSERT ROWS TABLE[INDEX:15] aN8Ujwxov_term_relationships NUM ROWS: 9
+INSERT ROWS TABLE[INDEX:16] aN8Ujwxov_term_taxonomy NUM ROWS: 12
+INSERT ROWS TABLE[INDEX:17] aN8Ujwxov_wpfm_backup NUM ROWS: 0
+SQL FILE SIZE CHECK OK, SIZE: 93885452
+SQL CREATED: 20260405_ewaoproject_fb670a663b1582b79480_20260405010307_database.sql
+SQL FILE SIZE: 89.54MB
+SQL FILE TIME: 2026-04-05 01:03:11
+SQL RUNTIME: 1.479 seg.
+MEMORY STACK: 45.84MB
+
+********************************************************************************
+ARCHIVE  Type=ZIP Mode=Shell
+********************************************************************************
+ARCHIVE DIR:  /var/www/vhosts/ewaoproject.com/httpdocs
+ARCHIVE FILE: 20260405_ewaoproject_fb670a663b1582b79480_20260405010307_archive.zip
+FILTERS: *OFF*
+DIRS:  not set
+EXTS:  not set
+FILES:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	789.75MB
+STATS:	Dirs 1,326 | Files 11,974 | Total 13,300
+SHELL COMMAND: cd '/var/www/vhosts/ewaoproject.com/httpdocs' && zip -6 -rq '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/tmp/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_archive.zip' ./ -x .opcache**\* .opcache .tmb**\* .tmb wp\-content/ai1wm\-backups**\* wp\-content/ai1wm\-backups wp\-content/backups\-dup\-lite**\* wp\-content/backups\-dup\-lite wp\-content/backups\-dup\-pro/**\* wp\-content/backups\-dup\-pro/ wp\-content/backupwordpress**\* wp\-content/backupwordpress wp\-content/bps\-backup**\* wp\-content/bps\-backup wp\-content/cache**\* wp\-content/cache wp\-content/content/cache**\* wp\-content/content/cache wp\-content/contents/cache**\* wp\-content/contents/cache wp\-content/infinitewp/backups**\* wp\-content/infinitewp/backups wp\-content/managewp/backups**\* wp\-content/managewp/backups wp\-content/old\-cache**\* wp\-content/old\-cache wp\-content/plugins/all\-in\-one\-wp\-migration/storage**\* wp\-content/plugins/all\-in\-one\-wp\-migration/storage wp\-content/plugins/really\-simple\-captcha/tmp**\* wp\-content/plugins/really\-simple\-captcha/tmp wp\-content/plugins/wordfence/tmp**\* wp\-content/plugins/wordfence/tmp wp\-content/updraft**\* wp\-content/updraft wp\-content/uploads/aiowps_backups**\* wp\-content/uploads/aiowps_backups wp\-content/uploads/backup\-guard**\* wp\-content/uploads/backup\-guard wp\-content/uploads/backupbuddy_backups**\* wp\-content/uploads/backupbuddy_backups wp\-content/uploads/backupbuddy_temp**\* wp\-content/uploads/backupbuddy_temp wp\-content/uploads/ithemes\-security/backups**\* wp\-content/uploads/ithemes\-security/backups wp\-content/uploads/mainwp/backup**\* wp\-content/uploads/mainwp/backup wp\-content/uploads/pb_backupbuddy**\* wp\-content/uploads/pb_backupbuddy wp\-content/uploads/snapshots**\* wp\-content/uploads/snapshots wp\-content/uploads/sucuri**\* wp\-content/uploads/sucuri wp\-content/uploads/wp\-clone**\* wp\-content/uploads/wp\-clone wp\-content/uploads/wp_all_backup**\* wp\-content/uploads/wp_all_backup wp\-content/uploads/wpbackitup_backups**\* wp\-content/uploads/wpbackitup_backups wp\-content/wfcache**\* wp\-content/wfcache wp\-content/wishlist\-backup**\* wp\-content/wishlist\-backup wp\-content/wpvividbackups**\* wp\-content/wpvividbackups wp\-snapshots**\* wp\-snapshots "../../../../../../.DS_Store" ".htaccess" ".user.ini" "php.ini" "web.config" "wp-config.php" "wp-content/debug.log" "../../../../../../dbcache" "../../../../../../debug_log" "../../../../../../error_log" "../../../../../../objectcache" "../../../../../../pgcache" "../../../../../../ws_ftp.log" wp-content/backups-dup-pro/**\*  2>&1
+COMPRESSED SIZE: 599.07MB
+ARCHIVE RUNTIME: 15.226 seg.
+MEMORY STACK: 45.84MB
+EXECUTING SHELL COMMAND
+SHELL COMMAND: cd '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/tmp/extras/' && zip -6 -g -rq '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/tmp/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_archive.zip' .[!.]* * -x "index.php"
+CHECK FILES Array
+(
+    [0] => dup-installer/api/class.api.php
+    [1] => dup-installer/assets/index.php
+    [2] => dup-installer/classes/index.php
+    [3] => dup-installer/ctrls/index.php
+    [4] => dup-installer/src/Utils/Autoloader.php
+    [5] => dup-installer/templates/default/page-help.php
+    [6] => dup-installer/main.installer.php
+    [7] => 20260405_ewaoproject_fb670a663b1582b79480_20260405010307_installer-backup.php
+    [8] => dup-installer/index.php
+    [9] => dup-installer/libs/Snap/index.php
+    [10] => dup-installer/assets/js/duplicator-tooltip.js
+    [11] => dup-installer/assets/js/tippy/index.php
+    [12] => dup-installer/assets/font-awesome/index.php
+    [13] => dup-installer/dup_descriptors_fb670a6-05010307/archive.txt
+    [14] => dup-installer/dup_descriptors_fb670a6-05010307/scan.json
+    [15] => dup-installer/dup_descriptors_fb670a6-05010307/index.txt
+    [16] => dup-installer/dup_descriptors_fb670a6-05010307/manual-extract
+    [17] => dup-installer/dup_descriptors_fb670a6-05010307/db_dumps/20260405010307-dump.sql
+)
+
+Executing extra count string unzip -Z1 '/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/tmp/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_archive.zip' | grep '^\(dup-installer/api/class.api.php\|dup-installer/assets/index.php\|dup-installer/classes/index.php\|dup-installer/ctrls/index.php\|dup-installer/src/Utils/Autoloader.php\|dup-installer/templates/default/page-help.php\|dup-installer/main.installer.php\|20260405_ewaoproject_fb670a663b1582b79480_20260405010307_installer-backup.php\|dup-installer/index.php\|dup-installer/libs/Snap/index.php\|dup-installer/assets/js/duplicator-tooltip.js\|dup-installer/assets/js/tippy/index.php\|dup-installer/assets/font-awesome/index.php\|dup-installer/dup_descriptors_fb670a6-05010307/archive.txt\|dup-installer/dup_descriptors_fb670a6-05010307/scan.json\|dup-installer/dup_descriptors_fb670a6-05010307/index.txt\|dup-installer/dup_descriptors_fb670a6-05010307/manual-extract\|dup-installer/dup_descriptors_fb670a6-05010307/db_dumps/20260405010307-dump.sql\)' | wc -l
+
+********************************************************************************
+STORAGE:
+********************************************************************************
+COMPATIBLE CON AMAZON S3: Minio, /ewaoproject.comewaoproject.com
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 89.54MB
+INSTALLER FILE: 128.17KB
+ARCHIVE FILE: 609.33MB 
+RECUENTO ARCHIVOS/DIRECTORIOS ESPERADOS: 13,300
+RECUENTO ARCHIVOS/DIRECTORIOS ACTUALES: 13,302
+
+********************************************************************************
+RECORD ID:[34]
+TOTAL PROCESS RUNTIME: 18.705 seg.
+PEAK PHP MEMORY USED: 45.84MB
+DONE PROCESSING => 20260405_ewaoproject 2026-04-05 01:03:28
+
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** COMPATIBLE CON AMAZON S3 [Name: Minio] [ID: 12] **
+Copyng to Storage Minio[ID: 12] type:Compatible con Amazon S3
+Copying file: /var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_installer.php.bak
+Offset: 0 of: 131243
+Local upload in chunks, upload error: Chunk action fail[/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/plugins/duplicator-pro/src/Libs/Chunking/ChunkingManager.php|136]
+Failure count increasing to 1 [Storage Id: 12]
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** COMPATIBLE CON AMAZON S3 [Name: Minio] [ID: 12] **
+Copyng to Storage Minio[ID: 12] type:Compatible con Amazon S3
+Copying file: /var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_installer.php.bak
+Offset: 0 of: 131243
+Local upload in chunks, upload error: Chunk action fail[/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/plugins/duplicator-pro/src/Libs/Chunking/ChunkingManager.php|136]
+Failure count increasing to 2 [Storage Id: 12]
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** COMPATIBLE CON AMAZON S3 [Name: Minio] [ID: 12] **
+Copyng to Storage Minio[ID: 12] type:Compatible con Amazon S3
+Copying file: /var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_installer.php.bak
+Offset: 0 of: 131243
+Local upload in chunks, upload error: Chunk action fail[/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/plugins/duplicator-pro/src/Libs/Chunking/ChunkingManager.php|136]
+Failure count increasing to 3 [Storage Id: 12]
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+** COMPATIBLE CON AMAZON S3 [Name: Minio] [ID: 12] **
+Copyng to Storage Minio[ID: 12] type:Compatible con Amazon S3
+Copying file: /var/www/vhosts/ewaoproject.com/httpdocs/wp-content/backups-dup-pro/20260405_ewaoproject_fb670a663b1582b79480_20260405010307_installer.php.bak
+Offset: 0 of: 131243
+Local upload in chunks, upload error: Chunk action fail[/var/www/vhosts/ewaoproject.com/httpdocs/wp-content/plugins/duplicator-pro/src/Libs/Chunking/ChunkingManager.php|136]
+Failure count increasing to 4 [Storage Id: 12]
+-----------------------------------------
+STORAGE PROCESSING THREAD INITIATED
+STORAGE PROCESSING COMPLETED
+***ERROR*** Couldn't remove pending cancel transient

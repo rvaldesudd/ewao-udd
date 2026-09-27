@@ -1,0 +1,30 @@
+Package 108 has been stuck for 7.0466560522715 minutes so cancelling. (422.79936313629)
+
+
+====================================================================
+!RUNTIME ERROR!
+---------------------------------------------------------------------
+MESSAGE:
+Backup was cancelled because it exceeded Max Build Time.
+DETAILS:
+(no detail)
+---------------------------------------------------------------------
+TRACE:
+1. TraitPackageBuild.php : error (436)
+2. Runner.php : buildFail (408)
+3. Runner.php : cancelMaxBuildTimeReached (270)
+4. Runner.php : cancelLongRunning (129)
+5. Runner.php : processPendingCancellations (72)
+6. Bootstrap.php : init (193)
+7. Bootstrap.php : initialChecks (129)
+8. class-wp-hook.php : hookWpInit (353)
+9. class-wp-hook.php : apply_filters (377)
+10. plugin.php : do_action (523)
+11. wp-settings.php : do_action (779)
+12. wp-config.php : require_once (177)
+13. wp-load.php : require_once (50)
+14. wp-blog-header.php : require_once (13)
+15. index.php : require (17)
+====================================================================
+
+

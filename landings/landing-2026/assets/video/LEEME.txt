@@ -1,0 +1,10 @@
+Coloca aquí tus archivos de video con estos nombres exactos
+para que se reproduzcan automáticamente en el fondo de cada sección:
+
+- hero.mp4          -> Video del Hero (sección principal "SIGUE VIVA")
+- territorio.mp4     -> Video sección "PATRIMONIO NATURAL DEL PLANETA"
+- modelo.mp4         -> Video sección "EL MODELO AMAZÓNICO QUE TRANSFORMA"
+
+Formato recomendado: MP4 (H.264), 1920x1080, comprimido para web (<15MB si es posible).
+Los videos se reproducen en loop, sin sonido (muted) y de forma automática (autoplay).
+Mientras no coloques el archivo, se mostrará la imagen "poster" de esa sección.
