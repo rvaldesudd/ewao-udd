@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+__pycache__/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# WordPress (cuando exista)
+landings/wordpress/wp-content/uploads/
+landings/wordpress/wp-content/cache/
+landings/wordpress/.htaccess
+landings/wordpress/wp-config.php
+
+# Docker
+landings/wordpress/.docker/
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# Credentials and secrets (NUNCA subir)
+*.pem
+*.key
+secrets/
+credentials.json
