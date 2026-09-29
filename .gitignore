@@ -47,13 +47,17 @@ landings/wordpress/html/wp-content/uploads/
 landings/wordpress/html/wp-content/cache/
 landings/wordpress/html/wp-content/upgrade/
 landings/wordpress/html/.htaccess
-# Excepción: wp-config.php, tema enfold y plugins del proyecto SÍ se versionan
+# Excepción: wp-config.php, tema enfold, plugins y CSS dinámico SÍ se versionan
 !landings/wordpress/html/wp-config.php
 !landings/wordpress/html/wp-content/themes/enfold/
 !landings/wordpress/html/wp-content/themes/enfold-child/
 !landings/wordpress/html/wp-content/plugins/duplicator-pro/
 !landings/wordpress/html/wp-content/plugins/gtranslate/
 !landings/wordpress/html/wp-content/plugins/disable-comments/
+!landings/wordpress/html/wp-content/uploads/dynamic_avia/
+!landings/wordpress/html/wp-content/uploads/avia_fonts/
+!landings/wordpress/html/wp-content/uploads/avia_demo_files/
+!landings/wordpress/html/wp-content/uploads/avia_posts_css/
 
 # Docker
 landings/wordpress/.docker/
