@@ -27,7 +27,6 @@ build/
 landings/wordpress/html/wp-content/uploads/
 landings/wordpress/html/wp-content/cache/
 landings/wordpress/html/.htaccess
-landings/wordpress/html/wp-config.php
 
 # Docker
 landings/wordpress/.docker/
@@ -35,6 +34,9 @@ landings/wordpress/.docker/
 # Database dumps
 *.sql
 *.sql.gz
+
+# Excepción: el dump de inicialización SÍ se versiona (sin él el WP clonado arranca vacío)
+!landings/wordpress/db/init/ewaoproject-local.sql
 
 # Credentials and secrets (NUNCA subir)
 *.pem
