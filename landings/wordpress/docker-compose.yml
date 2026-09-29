@@ -1,6 +1,23 @@
 name: ewao-wordpress
 
 services:
+  # Init container: copia el core de WordPress desde la imagen al host
+  # (el core completo ~600MB no se versiona en Git para mantener el repo ligero)
+  core-init:
+    image: wordpress:7.1.2-php8.4-apache
+    container_name: ewao_core_init
+    volumes:
+      - ./html:/var/www/html
+    entrypoint: >
+      bash -c "
+        set -e
+        echo 'Copiando core de WordPress...'
+        cp -rn /usr/src/wordpress/. /var/www/html/ 2>/dev/null || true
+        echo 'Core copiado.'
+      "
+    networks:
+      - ewao
+
   db:
     image: mariadb:10.11
     container_name: ewao_db
@@ -28,6 +45,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      core-init:
+        condition: service_completed_successfully
     ports:
       - "${WP_PORT:-8082}:80"
     environment:

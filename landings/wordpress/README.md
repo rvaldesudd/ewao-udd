@@ -31,6 +31,7 @@ docker compose up -d
 ```
 
 > El primer arranque importa automáticamente `db/init/ewaoproject-local.sql` (dump pre-procesado con URLs locales). Arranques siguientes son inmediatos.
+> El core de WordPress (~600 MB) se copia automáticamente desde la imagen de Docker en el primer arranque (no se versiona en Git para mantener el repo ligero).
 
 ## URLs y credenciales
 

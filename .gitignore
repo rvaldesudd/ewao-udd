@@ -24,9 +24,36 @@ dist/
 build/
 
 # WordPress (réplica local: ver landings/wordpress/README.md)
+# Core de WordPress (se copia automáticamente desde la imagen Docker, NO se versiona)
+landings/wordpress/html/wp-admin/
+landings/wordpress/html/wp-includes/
+landings/wordpress/html/index.php
+landings/wordpress/html/license.txt
+landings/wordpress/html/readme.html
+landings/wordpress/html/wp-activate.php
+landings/wordpress/html/wp-blog-header.php
+landings/wordpress/html/wp-comments-post.php
+landings/wordpress/html/wp-cron.php
+landings/wordpress/html/wp-links-opml.php
+landings/wordpress/html/wp-load.php
+landings/wordpress/html/wp-login.php
+landings/wordpress/html/wp-mail.php
+landings/wordpress/html/wp-settings.php
+landings/wordpress/html/wp-signup.php
+landings/wordpress/html/wp-trackback.php
+landings/wordpress/html/xmlrpc.php
+# Contenido dinámico / sensible
 landings/wordpress/html/wp-content/uploads/
 landings/wordpress/html/wp-content/cache/
+landings/wordpress/html/wp-content/upgrade/
 landings/wordpress/html/.htaccess
+# Excepción: wp-config.php, tema enfold y plugins del proyecto SÍ se versionan
+!landings/wordpress/html/wp-config.php
+!landings/wordpress/html/wp-content/themes/enfold/
+!landings/wordpress/html/wp-content/themes/enfold-child/
+!landings/wordpress/html/wp-content/plugins/duplicator-pro/
+!landings/wordpress/html/wp-content/plugins/gtranslate/
+!landings/wordpress/html/wp-content/plugins/disable-comments/
 
 # Docker
 landings/wordpress/.docker/
