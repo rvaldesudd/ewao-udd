@@ -6,7 +6,12 @@
 
 ## Miembros del equipo
 
-<!-- Nombres de los integrantes -->
+- Javiera Bustos
+- Laura Durán
+- Antonella García
+- Emilia Rodríguez
+
+**Prototipo (MVP):** [`prototipo/landing-voluntariado/`](prototipo/landing-voluntariado/) · publicado en https://ewao-voluntariado.e-rodriguezh.workers.dev
 
 ## Responsabilidades
 

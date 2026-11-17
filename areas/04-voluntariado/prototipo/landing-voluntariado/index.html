@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voluntariado Profesional | EWAO × Asociación Keweriono</title>
+  <meta name="description" content="Aporta tu capacidad técnica a iniciativas definidas por la Asociación Keweriono (pueblo Waorani, Amazonía ecuatoriana). Proyectos terminables, gestión profesional y continuidad después de la estancia." />
+  <meta property="og:title" content="Voluntariado Profesional EWAO" />
+  <meta property="og:description" content="Colaboración técnica con la Asociación Keweriono. No es turismo de voluntariado: es trabajo conjunto con entregables definidos." />
+  <meta property="og:image" content="img/hero.jpg" />
+  <link rel="preload" as="image" href="img/hero-m.jpg" media="(max-width:760px)" />
+  <link rel="preload" as="image" href="img/hero.jpg" media="(min-width:761px)" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&family=Truculenta:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --verde:#174133; --verde-2:#1d4a35; --noche:#08120e; --crema:#f3ede0; --crema-2:#e9e1d0;
+      --naranja:#df4c1d; --naranja-2:#a5461f; --tinta:#1b231f; --gris:#5b655f; --linea:#d8cfbd;
+      --ok:#2f7d4f; --dev:#b7791f; --proy:#5a6b8c;
+      --radio:14px; --max:1180px;
+      --f-tit:"Khand",system-ui,sans-serif; --f-txt:"Khand",system-ui,sans-serif; --f-hero:"Truculenta","Khand",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--f-txt);color:var(--tinta);background:var(--crema);line-height:1.5;font-size:18.5px}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    h1,h2,h3,h4{font-family:var(--f-tit);line-height:1.05;margin:0 0 .4em;letter-spacing:.01em;text-transform:uppercase;font-weight:700}
+    h2{font-size:clamp(2rem,4.2vw,3.1rem);text-transform:uppercase;color:var(--verde)}
+    h3{font-size:1.45rem}
+    p{margin:0 0 1em}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+    section{padding:88px 0;scroll-margin-top:70px}
+    .eyebrow{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:.8em}
+    .eyebrow::before{content:"";width:22px;height:3px;background:var(--naranja)}
+    .lead{font-size:1.12rem;color:var(--gris);max-width:760px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--f-txt);font-weight:700;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;padding:.8em 1.5em;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:.2s}
+    .btn-pri{background:var(--naranja);color:#fff}
+    .btn-pri:hover{background:var(--naranja-2)}
+    .btn-sec{border-color:currentColor;color:inherit;background:transparent}
+    .btn-sec:hover{background:rgba(255,255,255,.12)}
+    .btn-ghost{background:transparent;border-color:var(--verde);color:var(--verde)}
+    .btn-ghost:hover{background:var(--verde);color:var(--crema)}
+    .btn[disabled]{opacity:.5;cursor:not-allowed}
+    .grid{display:grid;gap:22px}
+    .card{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:26px}
+    .tag{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.3em .7em;border-radius:6px;background:var(--crema-2);color:var(--verde)}
+    .st{display:inline-flex;align-items:center;gap:.4em;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:.3em .65em;border-radius:6px;white-space:nowrap}
+    .st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+    .st-ok{color:var(--ok);background:#e3f1e8}.st-dev{color:var(--dev);background:#fbf0dc}.st-proy{color:var(--proy);background:#e6eaf2}
+
+    .proto-bar{background:var(--crema-2);color:var(--verde);text-align:center;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px}
+    @media (max-width:640px){.proto-long{display:none}}
+    /* Header */
+    .header{position:sticky;top:0;z-index:50;background:var(--verde);color:var(--crema);box-shadow:0 2px 14px rgba(0,0,0,.18)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+    .nav__logo img{height:42px;width:auto}
+    .nav__links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-weight:600;font-size:1.02rem;text-transform:uppercase;letter-spacing:.05em}
+    .nav__links a{text-decoration:none;opacity:.88}
+    .nav__links a:hover{opacity:1;color:#fff}
+    .nav__right{display:flex;align-items:center;gap:12px}
+    .lang{display:flex;border:1px solid rgba(243,237,224,.4);border-radius:999px;overflow:hidden}
+    .lang button{background:none;border:0;color:var(--crema);font-weight:700;font-size:.75rem;padding:.45em .8em;cursor:pointer}
+    .lang button[aria-pressed="true"]{background:var(--crema);color:var(--verde)}
+    .nav .btn{padding:.6em 1.1em;font-size:.85rem}
+    .nav__toggle{display:none;background:none;border:0;color:var(--crema);font-size:1.6rem;cursor:pointer}
+    @media (max-width:980px){
+      .nav__links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--verde);padding:16px 22px 22px;gap:14px}
+      .nav__links.open{display:flex}
+      .nav__toggle{display:block}
+      .nav .nav__cta{display:none}
+    }
+
+    /* Hero */
+    .hero{position:relative;color:#fff;padding:0;min-height:min(86vh,760px);display:flex;align-items:flex-end;background:var(--noche)}
+    .hero__img{position:absolute;inset:0;background:url("img/hero.jpg") center 35%/cover no-repeat}
+    @media (max-width:760px){.hero__img{background-image:url("img/hero-m.jpg")}}
+    .hero__img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,14,.35) 0%,rgba(8,18,14,.55) 45%,rgba(8,18,14,.92) 100%)}
+    .hero .wrap{position:relative;padding-top:120px;padding-bottom:70px}
+    .hero h1{font-family:var(--f-hero);font-size:clamp(2.5rem,6.4vw,5rem);text-transform:uppercase;max-width:900px;margin-bottom:.25em;color:#fff;font-weight:800;line-height:1}
+    .hero h1 em{font-style:normal;color:#fff;background:linear-gradient(transparent 72%,var(--naranja) 72%,var(--naranja) 92%,transparent 92%)}
+    .hero p.sub{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:720px;color:#efe9dc}
+    .hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 30px}
+    .hero__facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:.88rem;color:#d9d2c3;border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
+    .hero__facts b{color:#fff;font-family:var(--f-tit);font-size:1.35rem;display:block;line-height:1}
+    .hero__credit{position:absolute;right:16px;bottom:10px;font-size:.78rem;color:rgba(255,255,255,.75)}
+
+    /* No es turismo */
+    .contrast{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radio);overflow:hidden;border:1px solid var(--linea);margin-top:34px}
+    .contrast > div{padding:30px}
+    .contrast .no{background:#fff}
+    .contrast .si{background:var(--verde);color:var(--crema)}
+    .contrast h3{text-transform:uppercase}
+    .contrast .si h3{color:#fff}
+    .contrast ul{list-style:none;padding:0;margin:0}
+    .contrast li{padding:.55em 0 .55em 1.9em;position:relative;border-bottom:1px dashed rgba(0,0,0,.1)}
+    .contrast .si li{border-color:rgba(255,255,255,.15)}
+    .contrast li::before{position:absolute;left:0;top:.5em;font-weight:700}
+    .contrast .no li::before{content:"✕";color:#b42318}
+    .contrast .si li::before{content:"✓";color:#9fd8b2}
+    @media (max-width:760px){.contrast{grid-template-columns:1fr}}
+
+    /* Arquitectura */
+    #modelo{background:#fff}
+    .arch{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;position:relative}
+    .arch__lvl{padding:28px;border:1px solid var(--linea);background:var(--crema);position:relative}
+    .arch__lvl:nth-child(1){border-radius:var(--radio) 0 0 var(--radio)}
+    .arch__lvl:nth-child(3){border-radius:0 var(--radio) var(--radio) 0;background:var(--verde);color:var(--crema)}
+    .arch__lvl:nth-child(3) h3{color:#fff}
+    .arch__lvl .n{font-family:var(--f-tit);font-size:3rem;color:var(--verde);line-height:1;font-weight:700}
+    .arch__lvl:nth-child(3) .n{color:var(--crema)}
+    .arch__lvl h3{text-transform:uppercase;margin-top:.2em}
+    .arch__lvl .role{font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;opacity:.75;margin-bottom:.6em}
+    .arch__lvl:not(:last-child)::after{content:"→";position:absolute;right:-17px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--naranja);color:#fff;display:grid;place-items:center;font-weight:700;z-index:2}
+    .arch__note{margin-top:20px;font-size:.92rem;color:var(--gris)}
+    @media (max-width:860px){.arch{grid-template-columns:1fr}.arch__lvl{border-radius:0!important}.arch__lvl:first-child{border-radius:var(--radio) var(--radio) 0 0!important}.arch__lvl:last-child{border-radius:0 0 var(--radio) var(--radio)!important}.arch__lvl:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-17px;transform:translateX(-50%)}}
+
+    /* Fichas */
+    .fichas{grid-template-columns:repeat(auto-fit,minmax(255px,1fr));margin-top:34px}
+    .ficha{display:flex;flex-direction:column;gap:12px}
+    .ficha__top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+    .ficha__icon{width:46px;height:46px;border-radius:12px;background:var(--verde);color:var(--crema);display:grid;place-items:center;font-size:1.35rem;flex:none}
+    .ficha h3{color:var(--verde);margin:0}
+    .ficha dl{margin:0;font-size:.9rem}
+    .ficha dt{font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gris);margin-top:.6em}
+    .ficha dd{margin:0}
+    .ficha .btn{margin-top:auto;align-self:flex-start;padding:.6em 1.1em;font-size:.85rem}
+    .callout{margin-top:26px;padding:18px 22px;border-left:4px solid var(--naranja);background:#fff;border-radius:0 var(--radio) var(--radio) 0;font-size:.93rem}
+
+    /* Modalidades */
+    #modalidades{background:var(--verde);color:var(--crema)}
+    #modalidades h2{color:#fff}
+    #modalidades .lead{color:#cfd9d2}
+    .modos{grid-template-columns:repeat(3,1fr);margin-top:34px}
+    .modo{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radio);padding:28px;display:flex;flex-direction:column}
+    .modo .st{align-self:flex-start;margin-bottom:.8em}
+    .modo h3{color:#fff;text-transform:uppercase;font-size:1.6rem}
+    .modo .dur{font-family:var(--f-tit);font-size:1.2rem;font-weight:700;text-transform:uppercase;color:var(--crema);border-left:3px solid var(--naranja);padding-left:.6em;margin-bottom:.8em}
+    .modo ul{padding-left:1.1em;margin:0 0 1.2em;font-size:.93rem;color:#dfe7e2}
+    .modo .who{font-size:.82rem;color:#b8c8bf;border-top:1px solid rgba(255,255,255,.14);padding-top:.9em;margin-top:auto}
+    .modo .btn{margin-top:1em;align-self:flex-start}
+    @media (max-width:900px){.modos{grid-template-columns:1fr}}
+
+    /* Contribución */
+    .contrib{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;margin-top:34px;align-items:start}
+    .price{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:30px}
+    .contrib>*,.grid>*,.form-shell>*{min-width:0}
+    .price__big{font-family:var(--f-tit);font-size:clamp(2.8rem,11vw,4rem);font-weight:700;color:var(--verde);line-height:1}
+    .price__big small{font-size:1.2rem;color:var(--gris)}
+    .covers{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;list-style:none;padding:0;margin:18px 0;font-size:.92rem}
+    .covers li::before{content:"✓ ";color:var(--ok);font-weight:700}
+    .notinc{font-size:.85rem;color:var(--gris);background:var(--crema);padding:12px 14px;border-radius:10px}
+    .calc{background:var(--verde);color:var(--crema);border-radius:var(--radio);padding:30px}
+    .calc h3{color:#fff;text-transform:uppercase}
+    .calc label{font-weight:600;font-size:.9rem;display:block;margin:.6em 0 .3em}
+    .calc input[type=range]{width:100%;accent-color:var(--naranja)}
+    .calc__out{font-family:var(--f-tit);font-size:2.6rem;color:#fff;line-height:1.1;margin:.3em 0}
+    .calc__note{font-size:.85rem;color:#cfd9d2}
+    .split{margin-top:18px;border-top:1px solid rgba(255,255,255,.18);padding-top:16px;font-size:.88rem}
+    .split .st{white-space:normal;align-items:flex-start}
+    .split .bar{height:12px;border-radius:6px;background:rgba(255,255,255,.15);overflow:hidden;display:flex;margin:.5em 0}
+    .split .bar span{display:block;height:100%}
+    @media (max-width:900px){.contrib{grid-template-columns:1fr}.covers{grid-template-columns:1fr}}
+
+    /* Proceso */
+    #proceso{background:#fff}
+    .steps{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+    .steps li{position:relative;padding:0 18px 26px 0}
+    .steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--naranja);color:#fff;font-family:var(--f-tit);font-size:1.4rem;position:relative;z-index:1;margin-bottom:12px}
+    .steps li::after{content:"";position:absolute;top:22px;left:44px;right:0;height:2px;background:var(--linea)}
+    .steps li:nth-child(4n)::after{display:none}
+    .steps h4{font-size:1.2rem;text-transform:uppercase;color:var(--verde);margin-bottom:.25em}
+    .steps p{font-size:.88rem;color:var(--gris);margin:0}
+    .steps .auto{display:inline-block;margin-top:.5em;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--verde);background:#e3f1e8;padding:.2em .55em;border-radius:5px}
+    .steps .human{background:#efe6d6;color:var(--tinta)}
+    @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.steps li:nth-child(2n)::after{display:none}}
+    @media (max-width:520px){.steps{grid-template-columns:1fr}.steps li::after{display:none}}
+
+    /* Condiciones */
+    .cond{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;margin-top:34px}
+    .cond__img{margin:0;border-radius:var(--radio);overflow:hidden;position:relative}
+    .cond__img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .cond__img figcaption{position:absolute;right:10px;bottom:8px;font-size:.75rem;color:#fff;text-shadow:0 1px 3px #000}
+    .cond ul{list-style:none;padding:0;margin:0}
+    .cond li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--linea)}
+    .cond li span:first-child{font-size:1.4rem;flex:none;width:30px;text-align:center}
+    .cond li b{display:block;color:var(--verde)}
+    .cond li small{color:var(--gris);font-size:.88rem}
+    .fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+    .fit .card h3{text-transform:uppercase}
+    .fit ul{margin:0;padding-left:1.1em;font-size:.93rem}
+    .fit .yes h3{color:var(--ok)} .fit .nope h3{color:#b42318}
+    @media (max-width:860px){.cond,.fit{grid-template-columns:1fr}}
+
+    /* Formulario */
+    #postular{background:var(--verde);color:var(--crema)}
+    #postular h2{color:#fff}
+    #postular .lead{color:#c9d2cc}
+    .form-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;margin-top:34px;align-items:start}
+    .form-aside{font-size:.92rem;color:#c9d2cc}
+    .form-aside h3{color:#fff;text-transform:uppercase}
+    .form-aside ol{padding-left:1.2em}
+    .form-aside li{margin-bottom:.5em}
+    .form-card{background:var(--crema);color:var(--tinta);border-radius:var(--radio);padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+    .progress{display:flex;gap:6px;margin-bottom:8px}
+    .progress span{flex:1;height:6px;border-radius:3px;background:var(--linea)}
+    .progress span.on{background:var(--naranja)}
+    .progress-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);margin-bottom:18px}
+    fieldset{border:0;padding:0;margin:0}
+    .fstep{display:none}
+    .fstep.active{display:block;animation:fade .3s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    .fstep h3{color:var(--verde);text-transform:uppercase;font-size:1.6rem}
+    .field{margin-bottom:18px}
+    .field > label,.field > .lbl{display:block;font-weight:700;font-size:.9rem;margin-bottom:.4em}
+    .field .hint{font-size:.8rem;color:var(--gris);margin:-.2em 0 .5em}
+    input[type=text],input[type=email],input[type=url],select,textarea{width:100%;font:inherit;font-size:.95rem;padding:.75em .9em;border:1.5px solid var(--linea);border-radius:10px;background:#fff;color:var(--tinta)}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--verde);box-shadow:0 0 0 3px rgba(23,65,51,.15)}
+    textarea{min-height:110px;resize:vertical}
+    .choices{display:grid;gap:10px}
+    .choices.c3{grid-template-columns:repeat(3,1fr)}
+    .choice{position:relative}
+    .choice input{position:absolute;opacity:0;pointer-events:none}
+    .choice label{display:block;border:1.5px solid var(--linea);background:#fff;border-radius:12px;padding:12px 14px;cursor:pointer;font-size:.9rem;height:100%;transition:.15s}
+    .choice label b{display:block;color:var(--verde);font-size:.95rem}
+    .choice label small{color:var(--gris);font-size:.8rem}
+    .choice input:checked + label{border-color:var(--naranja);box-shadow:0 0 0 3px rgba(223,76,29,.15);background:#fffaf6}
+    .choice input:focus-visible + label{outline:2px solid var(--verde);outline-offset:2px}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .check{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;margin-bottom:10px}
+    .check input{margin-top:.25em;width:18px;height:18px;accent-color:var(--verde);flex:none}
+    .err{color:#b42318;font-size:.82rem;margin-top:.35em;display:none}
+    .field.invalid .err{display:block}
+    .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#b42318}
+    .field.invalid .choice label{border-color:#e9b4ad}
+    .fnav{display:flex;justify-content:space-between;gap:12px;margin-top:24px}
+    .hidden{display:none!important}
+    .privacy{font-size:.76rem;color:var(--gris);margin-top:14px}
+    @media (max-width:900px){.form-shell{grid-template-columns:1fr}.choices.c3{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+
+    /* Resultado + pasaporte */
+    .result h3{font-size:2rem;text-transform:uppercase;color:var(--verde)}
+    .score{display:flex;align-items:center;gap:14px;margin:12px 0 18px}
+    .score__bar{flex:1;height:12px;border-radius:6px;background:var(--linea);overflow:hidden}
+    .score__bar span{display:block;height:100%;background:linear-gradient(90deg,var(--naranja),var(--ok));width:0;transition:width 1s ease}
+    .score b{font-family:var(--f-tit);font-size:1.6rem;color:var(--verde)}
+    .next{background:#fff;border-radius:12px;padding:16px 18px;font-size:.9rem;margin-bottom:18px}
+    .next ol{margin:.4em 0 0;padding-left:1.2em}
+    .passport{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--verde);color:var(--crema);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+    .passport::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;border:18px solid rgba(255,255,255,.05)}
+    .passport canvas{background:#fff;border-radius:8px;padding:6px;width:132px;height:132px}
+    .passport .pid{font-family:var(--f-tit);font-size:1.5rem;color:#fff;letter-spacing:.04em}
+    .passport small{display:block;font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.08em}
+    .passport .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .passport .acts .btn{padding:.5em .9em;font-size:.78rem}
+    @media (max-width:520px){.passport{grid-template-columns:1fr}}
+    .demo-box{margin-top:16px;font-size:.8rem;background:#fff8e6;border:1px dashed var(--dev);border-radius:10px;padding:12px}
+    .demo-box pre{white-space:pre-wrap;word-break:break-word;max-height:220px;overflow:auto;background:#fff;padding:10px;border-radius:6px;font-size:.72rem}
+
+    /* Después */
+    .after{grid-template-columns:repeat(3,1fr);margin-top:34px}
+    .after .card h3{color:var(--verde);text-transform:uppercase}
+    .after .card .k{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gris)}
+    @media (max-width:900px){.after{grid-template-columns:1fr}}
+
+    /* Transparencia */
+    #transparencia{background:#fff}
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+    table.claims{width:100%;border-collapse:collapse;font-size:.9rem}
+    .claims th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gris);border-bottom:2px solid var(--verde);padding:10px 12px}
+    .claims td{border-bottom:1px solid var(--linea);padding:14px 12px;vertical-align:top}
+    .claims td:first-child{font-weight:700;color:var(--verde);white-space:nowrap}
+    .claims td small{color:var(--gris)}
+    .tbl-wrap{overflow-x:auto;border:1px solid var(--linea);border-radius:var(--radio)}
+    .rules{grid-template-columns:repeat(4,1fr);margin-top:28px}
+    .rules .card{padding:20px;font-size:.88rem}
+    .rules b{display:block;color:var(--verde);font-family:var(--f-tit);font-size:1.2rem;text-transform:uppercase}
+    @media (max-width:900px){.rules{grid-template-columns:1fr 1fr}}
+
+    /* FAQ */
+    .faq{max-width:860px;margin-top:30px}
+    .faq details{border-bottom:1px solid var(--linea);padding:4px 0}
+    .faq summary{cursor:pointer;font-weight:700;padding:16px 30px 16px 0;list-style:none;position:relative;color:var(--verde)}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:1.5rem;color:var(--verde)}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{color:var(--gris);font-size:.95rem}
+
+    /* CTA final + footer */
+    .final{background:var(--verde-2);color:var(--crema);text-align:center;padding:70px 0}
+    .final h2{color:#fff}
+    .final p{max-width:640px;margin:0 auto 24px;color:var(--crema)}
+    footer{background:var(--verde);color:#d6dccf;font-size:1rem;padding:46px 0 30px}
+    footer p{color:#d6dccf}
+    .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+    footer h4{color:var(--crema);text-transform:uppercase;font-size:1.05rem}
+    footer a{color:#cfd9d2}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin-bottom:.4em}
+    .foot__base{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;font-size:.75rem}
+    @media (max-width:800px){.foot{grid-template-columns:1fr}}
+
+    /* Mini CRM demo */
+    #crm-demo{background:#fff;padding:50px 0}
+    #crm-demo table{width:100%;border-collapse:collapse;font-size:.82rem}
+    #crm-demo th,#crm-demo td{border-bottom:1px solid var(--linea);padding:8px;text-align:left}
+    #crm-demo th{background:var(--crema)}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+
+<div class="proto-bar"><span data-i18n="proto_s">Prototipo académico, no oficial</span><span class="proto-long" data-i18n="proto_l"> · Grupo 04 Voluntariado · Marketing Internacional UDD 2026</span></div>
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap nav">
+    <a class="nav__logo" href="https://ewaoproject.com/" aria-label="EWAO Project — Inicio" data-cta="logo">
+      <img src="img/logo.png" alt="EWAO Project by Waodani" width="156" height="42" />
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#necesidades" data-i18n="nav_need">Necesidades</a></li>
+      <li><a href="#modalidades" data-i18n="nav_modes">Modalidades</a></li>
+      <li><a href="#contribucion" data-i18n="nav_price">Contribución</a></li>
+      <li><a href="#proceso" data-i18n="nav_proc">Proceso</a></li>
+      <li><a href="#transparencia" data-i18n="nav_trans">Transparencia</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#postular" class="btn btn-sec nav__cta" data-cta="nav_postular" data-i18n="cta_apply">Postular</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ 1. ATRAER — HERO (prueba de 5 segundos) ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__img" role="img" aria-label="Instalación de un panel solar junto a miembros de la comunidad Waorani"></div>
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--crema)" data-i18n="hero_eyebrow">Voluntariado Profesional EWAO · Territorio Waorani, Amazonía ecuatoriana</span>
+    <h1 data-i18n-html="hero_h1">Tu capacidad técnica, <em>donde la comunidad la necesita</em></h1>
+    <p class="sub" data-i18n="hero_sub">Colabora con la Asociación Keweriono en iniciativas que la propia comunidad define: proyectos terminables, con ficha técnica y entregable claro, gestión profesional y una relación que continúa después de la estancia.</p>
+    <div class="hero__ctas">
+      <a href="#necesidades" class="btn btn-pri" data-cta="hero_necesidades" data-i18n="hero_cta1">Ver necesidades abiertas</a>
+      <a href="#postular" class="btn btn-sec" data-cta="hero_postular" data-i18n="hero_cta2">Postular en 4 pasos</a>
+    </div>
+    <div class="hero__facts">
+      <div><b>6–10</b><span data-i18n="fact1">personas por grupo</span></div>
+      <div><b data-i18n="fact2b">2 sem – 3 meses</b><span data-i18n="fact2">estancia presencial</span></div>
+      <div><b>USD 250</b><span data-i18n="fact3">por semana, costos reales</span></div>
+      <div><b data-i18n="fact4b">Remoto</b><span data-i18n="fact4">Open Collaboration sin costo</span></div>
+    </div>
+  </div>
+  <span class="hero__credit" data-i18n="credit">Foto: banco oficial EWAO Project (ewaoproject.com)</span>
+</section>
+
+<!-- ============ 2. INFORMAR — Qué es / qué no es ============ -->
+<section id="que-es">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="q_eyebrow">Antes de seguir</span>
+    <h2 data-i18n="q_h2">Esto no es turismo de voluntariado</h2>
+    <p class="lead" data-i18n="q_lead">No vendemos una experiencia: abrimos una oportunidad de trabajo conjunto. Primero existe una necesidad definida por la comunidad; después buscamos a la persona con la capacidad adecuada.</p>
+    <div class="contrast reveal">
+      <div class="no">
+        <h3 data-i18n="q_no_t">Lo que no hacemos</h3>
+        <ul>
+          <li data-i18n="q_no1">“Ayudar” a una comunidad que no lo pidió</li>
+          <li data-i18n="q_no2">Llenar plazas o calendarios turísticos</li>
+          <li data-i18n="q_no3">Prometer transformaciones personales o “experiencias únicas”</li>
+          <li data-i18n="q_no4">Publicar imágenes, saberes o datos sin autorización comunitaria</li>
+          <li data-i18n="q_no5">Afirmar impactos que no podemos demostrar</li>
+        </ul>
+      </div>
+      <div class="si">
+        <h3 data-i18n="q_si_t">Lo que sí hacemos</h3>
+        <ul>
+          <li data-i18n="q_si1">Fichas de necesidad validadas por la Asamblea Keweriono</li>
+          <li data-i18n="q_si2">Proyectos realistas y terminables, con entregable definido</li>
+          <li data-i18n="q_si3">Selección en dos fases según capacidad, no según volumen</li>
+          <li data-i18n="q_si4">Aprendizaje en ambos sentidos: saberes técnicos y saberes del territorio</li>
+          <li data-i18n="q_si5">Continuidad remota y red de exvoluntarios después de la estancia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Arquitectura de marca ============ -->
+<section id="modelo">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="m_eyebrow">Cómo funciona el modelo</span>
+    <h2 data-i18n="m_h2">Quién decide, quién conecta, quién aporta</h2>
+    <p class="lead" data-i18n="m_lead">El voluntariado es una línea del Modelo EWAO. Respeta la gobernanza de la comunidad: la Asociación Keweriono define las prioridades y la capacidad de recepción del territorio.</p>
+    <div class="arch reveal">
+      <div class="arch__lvl">
+        <div class="n">01</div>
+        <h3>Asociación Keweriono</h3>
+        <div class="role" data-i18n="m1_role">Decide · fuente de legitimidad</div>
+        <p data-i18n="m1_p">Comunidad Waorani organizada en Asamblea. Define necesidades, prioridades, qué se comparte y cuántas personas puede recibir el territorio.</p>
+      </div>
+      <div class="arch__lvl">
+        <div class="n">02</div>
+        <h3>EWAO</h3>
+        <div class="role" data-i18n="m2_role">Conecta · coordina</div>
+        <p data-i18n="m2_p">Traduce cada necesidad en una ficha publicable, selecciona perfiles, coordina la logística con un procedimiento operativo (SOP) y devuelve resultados al territorio.</p>
+      </div>
+      <div class="arch__lvl">
+        <div class="n">03</div>
+        <h3 data-i18n="m3_t">Voluntariado profesional</h3>
+        <div class="role" data-i18n="m3_role">Aporta capacidades</div>
+        <p data-i18n="m3_p">Profesionales y estudiantes avanzados que aportan una capacidad concreta a iniciativas como agua y saneamiento, vivienda, energía o educación.</p>
+      </div>
+    </div>
+    <p class="arch__note" data-i18n="m_note">El voluntariado se mantiene separado de la oferta turística: expectativas, protocolos y alojamiento son distintos. La estadía es comunitaria y sencilla.</p>
+  </div>
+</section>
+
+<!-- ============ Fichas de necesidad ============ -->
+<section id="necesidades">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="n_eyebrow">Áreas de contribución</span>
+    <h2 data-i18n="n_h2">Necesidades que buscan capacidad</h2>
+    <p class="lead" data-i18n="n_lead">Estas son las áreas prioritarias definidas en el programa, hoy en fase pre-operativa: la convocatoria está activa y el grupo piloto aún no viaja. Cada proyecto concreto se publica como ficha con responsables, comunidad involucrada, materiales, cronograma y entregable final.</p>
+    <div class="grid fichas">
+      <article class="card ficha reveal">
+        <div class="ficha__top"><div class="ficha__icon" aria-hidden="true">⌂</div><span class="st st-dev" data-i18n="st_dev">En desarrollo</span></div>
+        <h3 data-i18n="f1_t">Construcción sostenible e infraestructura</h3>
+        <dl>
+          <dt data-i18n="f_perfil">Perfil</dt><dd data-i18n="f1_p">Ingeniería civil, arquitectura bioclimática, carpintería, bioconstrucción.</dd>
+          <dt data-i18n="f_entregable">Tipo de entregable</dt><dd data-i18n="f1_e">Obra o sistema terminado, con planos y manual de mantenimiento para la comunidad.</dd>
+          <dt data-i18n="f_mod">Modalidad</dt><dd data-i18n="f_mod_pres">Presencial (grupal o residencial)</dd>
+        </dl>
+        <a href="#postular" class="btn btn-ghost" data-cta="ficha_construccion" data-area="arquitectura" data-i18n="f_cta">Postular a esta área</a>
+      </article>
+      <article class="card ficha reveal">
+        <div class="ficha__top"><div class="ficha__icon" aria-hidden="true">≈</div><span class="st st-dev" data-i18n="st_dev">En desarrollo</span></div>
+        <h3 data-i18n="f2_t">Agua, energía y agroecología</h3>
+        <dl>
+          <dt data-i18n="f_perfil">Perfil</dt><dd data-i18n="f2_p">Ciencias ambientales, hidrología, agronomía, energías renovables.</dd>
+          <dt data-i18n="f_entregable">Tipo de entregable</dt><dd data-i18n="f2_e">Sistema de filtración, huerto agroforestal o instalación energética operativa y transferida.</dd>
+          <dt data-i18n="f_mod">Modalidad</dt><dd data-i18n="f_mod_pres">Presencial (grupal o residencial)</dd>
+        </dl>
+        <a href="#postular" class="btn btn-ghost" data-cta="ficha_agua" data-area="agua" data-i18n="f_cta">Postular a esta área</a>
+      </article>
+      <article class="card ficha reveal">
+        <div class="ficha__top"><div class="ficha__icon" aria-hidden="true">✎</div><span class="st st-dev" data-i18n="st_dev">En desarrollo</span></div>
+        <h3 data-i18n="f3_t">Capacitación y educación técnica</h3>
+        <dl>
+          <dt data-i18n="f_perfil">Perfil</dt><dd data-i18n="f3_p">Pedagogía, gestión de microproyectos, contabilidad básica, metodologías participativas.</dd>
+          <dt data-i18n="f_entregable">Tipo de entregable</dt><dd data-i18n="f3_e">Talleres impartidos y material formativo que queda en manos de la comunidad.</dd>
+          <dt data-i18n="f_mod">Modalidad</dt><dd data-i18n="f3_m">Presencial o mentoría remota</dd>
+        </dl>
+        <a href="#postular" class="btn btn-ghost" data-cta="ficha_educacion" data-area="educacion" data-i18n="f_cta">Postular a esta área</a>
+      </article>
+      <article class="card ficha reveal">
+        <div class="ficha__top"><div class="ficha__icon" aria-hidden="true">⌘</div><span class="st st-proy" data-i18n="st_proy">Proyectado</span></div>
+        <h3 data-i18n="f4_t">Comunicación, datos y traducción</h3>
+        <dl>
+          <dt data-i18n="f_perfil">Perfil</dt><dd data-i18n="f4_p">Diseño, traducción, análisis de datos, cartografía, investigación de mercados.</dd>
+          <dt data-i18n="f_entregable">Tipo de entregable</dt><dd data-i18n="f4_e">Tarea con brief y alcance acotado; validación humana cuando toca contenido cultural.</dd>
+          <dt data-i18n="f_mod">Modalidad</dt><dd data-i18n="f4_m">Remoto · EWAO Open Collaboration</dd>
+        </dl>
+        <a href="#postular" class="btn btn-ghost" data-cta="ficha_remoto" data-area="comunicacion" data-modo="remoto" data-i18n="f4_cta">Colaborar en remoto</a>
+      </article>
+    </div>
+    <div class="callout" data-i18n-html="n_callout"><b>¿Tu especialidad no aparece?</b> La lista no es exhaustiva. Postula igual: el formulario compara tu perfil con las fichas vigentes y, si no hay una compatible hoy, te avisamos cuando la comunidad abra una.</div>
+  </div>
+</section>
+
+<!-- ============ 3. SEGMENTAR — Modalidades ============ -->
+<section id="modalidades">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--crema)" data-i18n="mo_eyebrow">Elige tu ruta</span>
+    <h2 data-i18n="mo_h2">Tres formas de colaborar</h2>
+    <p class="lead" data-i18n="mo_lead">La modalidad depende de tu disponibilidad y de lo que la necesidad requiere, no de lo que resulte más atractivo para un viaje.</p>
+    <div class="grid modos">
+      <div class="modo reveal">
+        <span class="st st-dev" data-i18n="st_dev">En desarrollo</span>
+        <h3 data-i18n="mo1_t">Estancia grupal</h3>
+        <div class="dur" data-i18n="mo1_d">2 a 4 semanas · 6–10 personas</div>
+        <ul>
+          <li data-i18n="mo1_1">Frentes de trabajo acotados: 1–3 proyectos por grupo</li>
+          <li data-i18n="mo1_2">Aprox. 5 horas de contribución diaria</li>
+          <li data-i18n="mo1_3">Coordinación y mediación intercultural incluidas</li>
+        </ul>
+        <div class="who" data-i18n="mo1_w">Ideal para: estudiantes avanzados y profesionales jóvenes; expertos senior en estancias cortas.</div>
+        <a href="#postular" class="btn btn-sec" data-cta="modo_grupal" data-modo="corta" data-i18n="mo_cta">Elegir esta ruta</a>
+      </div>
+      <div class="modo reveal">
+        <span class="st st-dev" data-i18n="st_dev">En desarrollo</span>
+        <h3 data-i18n="mo2_t">Estancia residencial</h3>
+        <div class="dur" data-i18n="mo2_d">1 a 3 meses</div>
+        <ul>
+          <li data-i18n="mo2_1">Rol definido dentro de una iniciativa de mayor duración</li>
+          <li data-i18n="mo2_2">Contribución semanal reducida para estancias largas</li>
+          <li data-i18n="mo2_3">Más de 3 meses: acuerdo personalizado</li>
+        </ul>
+        <div class="who" data-i18n="mo2_w">Ideal para: profesionales en pausa laboral o sabático con experiencia demostrable.</div>
+        <a href="#postular" class="btn btn-sec" data-cta="modo_residencial" data-modo="residencial" data-i18n="mo_cta">Elegir esta ruta</a>
+      </div>
+      <div class="modo reveal">
+        <span class="st st-proy" data-i18n="st_proy">Proyectado</span>
+        <h3 data-i18n="mo3_t">Colaboración remota</h3>
+        <div class="dur" data-i18n="mo3_d">Por tarea · sin viajar · sin costo</div>
+        <ul>
+          <li data-i18n="mo3_1">Tareas con brief breve y alcance claro</li>
+          <li data-i18n="mo3_2">Reconocimiento público de tu aporte (con tu permiso)</li>
+          <li data-i18n="mo3_3">Puerta de entrada y continuidad de exvoluntarios</li>
+        </ul>
+        <div class="who" data-i18n="mo3_w">Ideal para: diseño, traducción, datos, comunicación y mentorías.</div>
+        <a href="#postular" class="btn btn-sec" data-cta="modo_remoto" data-modo="remoto" data-i18n="mo_cta">Elegir esta ruta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Contribución (Precio) ============ -->
+<section id="contribucion">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="p_eyebrow">Contribución transparente</span>
+    <h2 data-i18n="p_h2">No es una donación: cubre costos reales</h2>
+    <p class="lead" data-i18n="p_lead">Tu contribución financia la operación de tu estancia para que recibirte no sea una carga para la comunidad. Te mostramos qué cubre y qué no.</p>
+    <div class="contrib">
+      <div class="price reveal">
+        <span class="tag" data-i18n="p_tag">Contribución estándar</span>
+        <div class="price__big">USD 250 <small data-i18n="p_week">/ semana</small></div>
+        <ul class="covers">
+          <li data-i18n="p_c1">Alojamiento comunitario</li>
+          <li data-i18n="p_c2">Alimentación</li>
+          <li data-i18n="p_c3">Acceso a internet (limitado)</li>
+          <li data-i18n="p_c4">Coordinación y acompañamiento</li>
+          <li data-i18n="p_c5">Traducción y mediación intercultural</li>
+          <li data-i18n="p_c6">Materiales y operación del programa</li>
+        </ul>
+        <div class="notinc" data-i18n-html="p_notinc"><b>No incluye:</b> vuelos internacionales, seguro médico y de evacuación (obligatorio), trámites de visa ni gastos personales. Los traslados al territorio se detallan en la ficha de cada grupo.</div>
+      </div>
+      <div class="calc reveal" id="calc">
+        <h3 data-i18n="c_t">Calcula tu contribución</h3>
+        <label for="weeks"><span data-i18n="c_l">Semanas en territorio:</span> <strong id="weeksVal">2</strong></label>
+        <input type="range" id="weeks" min="2" max="12" value="2" step="1" />
+        <div class="calc__out" id="calcOut">USD 500</div>
+        <p class="calc__note" id="calcNote" data-i18n="c_n1">Tarifa estándar. Estancias de 1 a 3 meses pueden acceder a una contribución reducida, que se confirma en la entrevista.</p>
+        <div class="split">
+          <div data-i18n-html="c_split"><b>¿A dónde va?</b> El SOP del programa destina el 70% a la economía local (materiales y soporte logístico).</div>
+          <div class="bar" aria-hidden="true"><span style="width:70%;background:#9fd8b2"></span><span style="width:30%;background:#ff9b73"></span></div>
+          <span class="st st-dev" data-i18n="c_split_st">En desarrollo · se verificará con el informe del piloto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Proceso (journey) ============ -->
+<section id="proceso">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="pr_eyebrow">Del interés a la continuidad</span>
+    <h2 data-i18n="pr_h2">Así funciona el proceso</h2>
+    <p class="lead" data-i18n="pr_lead">Automatizamos lo repetitivo para que el equipo humano dedique su tiempo a lo que importa: la entrevista, la coordinación con la comunidad y el acompañamiento.</p>
+    <ol class="steps">
+      <li><h4 data-i18n="s1_t">Postula</h4><p data-i18n="s1_p">Formulario de 4 pasos con tu perfil técnico y disponibilidad.</p><span class="auto" data-i18n="auto">Automático</span></li>
+      <li><h4 data-i18n="s2_t">Fase 1: filtro</h4><p data-i18n="s2_p">El sistema compara tu perfil con las fichas vigentes y te asigna una ruta.</p><span class="auto" data-i18n="auto">Automático</span></li>
+      <li><h4 data-i18n="s3_t">Fase 2: entrevista</h4><p data-i18n="s3_p">Conversación técnica y de adaptación con el equipo de coordinación.</p><span class="auto human" data-i18n="human">Humano</span></li>
+      <li><h4 data-i18n="s4_t">Comité y confirmación</h4><p data-i18n="s4_p">Se valida tu encaje con la necesidad y la capacidad del territorio.</p><span class="auto human" data-i18n="human">Humano</span></li>
+      <li><h4 data-i18n="s5_t">Contribución y acuerdos</h4><p data-i18n="s5_p">Pago, acta de compromiso operativo y exención de responsabilidades.</p><span class="auto" data-i18n="auto">Automático</span></li>
+      <li><h4 data-i18n="s6_t">Onboarding</h4><p data-i18n="s6_p">Manual del participante, salud, seguro, visa y acuerdo de convivencia.</p><span class="auto" data-i18n="auto">Automático</span></li>
+      <li><h4 data-i18n="s7_t">Estancia</h4><p data-i18n="s7_p">Trabajo en tu ficha, seguimiento diario y registro de horas y avances.</p><span class="auto human" data-i18n="human">Humano</span></li>
+      <li><h4 data-i18n="s8_t">Entrega y continuidad</h4><p data-i18n="s8_p">Evaluación en ambos sentidos, entrega del resultado y paso a la red remota.</p><span class="auto" data-i18n="auto">Automático</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ Condiciones reales ============ -->
+<section id="condiciones">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="co_eyebrow">Condiciones reales</span>
+    <h2 data-i18n="co_h2">Lo que necesitas saber del territorio</h2>
+    <div class="cond">
+      <figure class="cond__img reveal"><img src="img/territorio.jpg" loading="lazy" width="1400" height="656" alt="Bosque amazónico en territorio Waorani" /><figcaption data-i18n="credit2">Foto: banco oficial EWAO Project (ewaoproject.com)</figcaption></figure>
+      <ul class="reveal">
+        <li><span aria-hidden="true">⏱</span><span><b data-i18n="co1_t">Jornada de trabajo</b><small data-i18n="co1_p">Aproximadamente 5 horas diarias de contribución; el resto se comparte con la vida comunitaria.</small></span></li>
+        <li><span aria-hidden="true">⌂</span><span><b data-i18n="co2_t">Alojamiento sencillo</b><small data-i18n="co2_p">Estadía comunitaria, comidas compartidas y comodidades básicas.</small></span></li>
+        <li><span aria-hidden="true">📶</span><span><b data-i18n="co3_t">Conectividad limitada</b><small data-i18n="co3_p">El acceso a internet es restringido; planifica tu trabajo para funcionar sin conexión.</small></span></li>
+        <li><span aria-hidden="true">☂</span><span><b data-i18n="co4_t">Clima tropical húmedo</b><small data-i18n="co4_p">Calor, humedad, lluvias e insectos. Los eventos climáticos pueden alterar fechas y traslados.</small></span></li>
+        <li><span aria-hidden="true">✚</span><span><b data-i18n="co5_t">Salud y seguridad</b><small data-i18n="co5_p">Seguro médico y de evacuación obligatorio, protocolos de emergencia y condición física compatible con entornos aislados.</small></span></li>
+      </ul>
+    </div>
+    <div class="fit">
+      <div class="card yes reveal">
+        <h3 data-i18n="fit_y">Es para ti si…</h3>
+        <ul>
+          <li data-i18n="fy1">Tienes una capacidad técnica concreta y quieres aplicarla a una necesidad real</li>
+          <li data-i18n="fy2">Valoras el intercambio cultural y aprender de la comunidad</li>
+          <li data-i18n="fy3">Te adaptas a la incertidumbre y a condiciones simples</li>
+          <li data-i18n="fy4">Aceptas que la comunidad decide prioridades y ritmos</li>
+        </ul>
+      </div>
+      <div class="card nope reveal">
+        <h3 data-i18n="fit_n">No es para ti si…</h3>
+        <ul>
+          <li data-i18n="fn1">Buscas unas vacaciones o una aventura</li>
+          <li data-i18n="fn2">Necesitas comodidad o conexión permanente</li>
+          <li data-i18n="fn3">Esperas un entorno muy estructurado o resultados inmediatos</li>
+          <li data-i18n="fn4">Quieres fotografiar o publicar la vida comunitaria sin permiso</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. CONVERTIR — Formulario inteligente ============ -->
+<section id="postular">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--crema)" data-i18n="fo_eyebrow">Postulación</span>
+    <h2 data-i18n="fo_h2">Postula en 4 pasos</h2>
+    <p class="lead" data-i18n="fo_lead">Toma unos 4 minutos. Al terminar sabrás tu ruta recomendada y recibirás tu Pasaporte EWAO con código QR.</p>
+    <div class="form-shell">
+      <aside class="form-aside">
+        <h3 data-i18n="fa_t">Qué pasa con tus datos</h3>
+        <ol>
+          <li data-i18n="fa1">Se registran en el CRM único de EWAO, con tu consentimiento explícito.</li>
+          <li data-i18n="fa2">Un puntaje automático ordena las postulaciones; ninguna se rechaza sin revisión humana.</li>
+          <li data-i18n="fa3">Recibirás un correo de confirmación con los siguientes pasos de tu ruta.</li>
+          <li data-i18n="fa4">Solo compartimos tu contacto con otra línea de EWAO si tú lo autorizas.</li>
+        </ol>
+        <p data-i18n-html="fa_contact">¿Dudas? Escríbenos a <a href="mailto:voluntario@ewaoproject.com">voluntario@ewaoproject.com</a></p>
+      </aside>
+
+      <div class="form-card" id="formCard">
+        <form id="volForm" novalidate data-hs-do-not-collect="true">
+          <input type="hidden" name="grupo_responsable" id="grupo_responsable" value="Grupo 04 - Voluntariado" />
+          <div class="progress" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+          <div class="progress-label" id="progLabel">Paso 1 de 4</div>
+
+          <!-- PASO 1 -->
+          <fieldset class="fstep active" data-step="1">
+            <h3 data-i18n="st1_t">Tu forma de colaborar</h3>
+            <div class="field" data-req="modalidad">
+              <span class="lbl" data-i18n="q_mod">¿Qué modalidad te interesa?</span>
+              <div class="choices c3">
+                <div class="choice"><input type="radio" name="modalidad" id="m1" value="corta"><label for="m1"><b data-i18n="mo1_t">Estancia grupal</b><small data-i18n="q_mod1">2–4 semanas</small></label></div>
+                <div class="choice"><input type="radio" name="modalidad" id="m2" value="residencial"><label for="m2"><b data-i18n="mo2_t">Estancia residencial</b><small data-i18n="q_mod2">1–3 meses</small></label></div>
+                <div class="choice"><input type="radio" name="modalidad" id="m3" value="remoto"><label for="m3"><b data-i18n="mo3_t">Colaboración remota</b><small data-i18n="q_mod3">Por tarea, sin viajar</small></label></div>
+              </div>
+              <div class="err" data-i18n="err_choice">Elige una opción.</div>
+            </div>
+            <div class="field only-pres" data-req="disponibilidad">
+              <label for="disponibilidad" data-i18n="q_disp">¿Cuándo podrías viajar?</label>
+              <select id="disponibilidad" name="disponibilidad">
+                <option value="" data-i18n="sel">Selecciona…</option>
+                <option value="2027-T1" data-i18n="d1">Enero – marzo 2027</option>
+                <option value="2027-T2" data-i18n="d2">Abril – junio 2027</option>
+                <option value="2027-T3" data-i18n="d3">Julio – septiembre 2027</option>
+                <option value="2027-T4" data-i18n="d4">Octubre – diciembre 2027</option>
+                <option value="flexible" data-i18n="d5">Flexible</option>
+              </select>
+              <div class="err" data-i18n="err_sel">Selecciona una opción.</div>
+            </div>
+            <div class="field only-rem hidden" data-req="horas">
+              <label for="horas" data-i18n="q_horas">¿Cuántas horas a la semana podrías dedicar?</label>
+              <select id="horas" name="horas">
+                <option value="" data-i18n="sel">Selecciona…</option>
+                <option value="1-3">1–3 h</option>
+                <option value="4-8">4–8 h</option>
+                <option value="9+">9 h o más</option>
+                <option value="proyecto" data-i18n="h4">Por proyecto puntual</option>
+              </select>
+              <div class="err" data-i18n="err_sel">Selecciona una opción.</div>
+            </div>
+          </fieldset>
+
+          <!-- PASO 2 -->
+          <fieldset class="fstep" data-step="2">
+            <h3 data-i18n="st2_t">Tu capacidad técnica</h3>
+            <div class="field" data-req="area">
+              <label for="area" data-i18n="q_area">Área principal de contribución</label>
+              <select id="area" name="area">
+                <option value="" data-i18n="sel">Selecciona…</option>
+                <option value="arquitectura" data-i18n="a1">Arquitectura y bioconstrucción</option>
+                <option value="construccion" data-i18n="a2">Construcción y carpintería</option>
+                <option value="agua" data-i18n="a3">Agua, saneamiento y energías renovables</option>
+                <option value="agroecologia" data-i18n="a4">Agroecología y permacultura</option>
+                <option value="ambiental" data-i18n="a5">Biología y ciencias ambientales</option>
+                <option value="educacion" data-i18n="a6">Educación y pedagogía</option>
+                <option value="salud" data-i18n="a7">Salud y desarrollo comunitario</option>
+                <option value="gestion" data-i18n="a8">Gestión de proyectos e investigación</option>
+                <option value="comunicacion" data-i18n="a9">Comunicación, medios y narrativa</option>
+                <option value="datos" data-i18n="a10">Diseño, datos y tecnología</option>
+                <option value="traduccion" data-i18n="a11">Traducción e idiomas</option>
+                <option value="otra" data-i18n="a12">Otra</option>
+              </select>
+              <div class="err" data-i18n="err_sel">Selecciona una opción.</div>
+            </div>
+            <div class="field" data-req="experiencia">
+              <span class="lbl" data-i18n="q_exp">Experiencia en esa área</span>
+              <div class="choices" style="grid-template-columns:1fr 1fr">
+                <div class="choice"><input type="radio" name="experiencia" id="e1" value="estudiante"><label for="e1" data-i18n="e1">Estudiante avanzado/a</label></div>
+                <div class="choice"><input type="radio" name="experiencia" id="e2" value="1-3"><label for="e2" data-i18n="e2">1 a 3 años</label></div>
+                <div class="choice"><input type="radio" name="experiencia" id="e3" value="3-10"><label for="e3" data-i18n="e3">3 a 10 años</label></div>
+                <div class="choice"><input type="radio" name="experiencia" id="e4" value="10+"><label for="e4" data-i18n="e4">Más de 10 años</label></div>
+              </div>
+              <div class="err" data-i18n="err_choice">Elige una opción.</div>
+            </div>
+            <div class="field">
+              <label for="portafolio" data-i18n="q_port">LinkedIn o portafolio (opcional, suma puntaje)</label>
+              <input type="url" id="portafolio" name="portafolio" placeholder="https://" />
+            </div>
+            <div class="row2">
+              <div class="field" data-req="idioma">
+                <label for="idioma" data-i18n="q_idioma">Nivel de español</label>
+                <select id="idioma" name="idioma">
+                  <option value="" data-i18n="sel">Selecciona…</option>
+                  <option value="nativo" data-i18n="i1">Nativo / avanzado</option>
+                  <option value="intermedio" data-i18n="i2">Intermedio</option>
+                  <option value="basico" data-i18n="i3">Básico o ninguno</option>
+                </select>
+                <div class="err" data-i18n="err_sel">Selecciona una opción.</div>
+              </div>
+              <div class="field">
+                <label for="otros_idiomas" data-i18n="q_otros">Otros idiomas</label>
+                <input type="text" id="otros_idiomas" name="otros_idiomas" data-i18n-ph="ph_otros" placeholder="Ej.: inglés, alemán" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- PASO 3 -->
+          <fieldset class="fstep" data-step="3">
+            <h3 data-i18n="st3_t">Preparación y motivación</h3>
+            <div class="field only-pres" data-req="condiciones">
+              <span class="lbl" data-i18n="q_cond">¿Aceptas las condiciones del territorio? (5 h diarias, alojamiento comunitario, conectividad limitada, seguro obligatorio)</span>
+              <div class="choices c3">
+                <div class="choice"><input type="radio" name="condiciones" id="c1" value="si"><label for="c1" data-i18n="yes_acc">Sí, las acepto</label></div>
+                <div class="choice"><input type="radio" name="condiciones" id="c2" value="dudas"><label for="c2" data-i18n="doubts">Tengo dudas</label></div>
+                <div class="choice"><input type="radio" name="condiciones" id="c3" value="no"><label for="c3" data-i18n="no_acc">No por ahora</label></div>
+              </div>
+              <div class="err" data-i18n="err_choice">Elige una opción.</div>
+            </div>
+            <div class="field only-pres" data-req="contribucion">
+              <span class="lbl" data-i18n="q_contrib">¿Puedes cubrir la contribución de USD 250 por semana?</span>
+              <div class="choices c3">
+                <div class="choice"><input type="radio" name="contribucion" id="p1" value="si"><label for="p1" data-i18n="yes">Sí</label></div>
+                <div class="choice"><input type="radio" name="contribucion" id="p2" value="apoyo"><label for="p2" data-i18n="p_apoyo">Buscaría apoyo (universidad, empleador, beca)</label></div>
+                <div class="choice"><input type="radio" name="contribucion" id="p3" value="no"><label for="p3" data-i18n="no">No</label></div>
+              </div>
+              <div class="err" data-i18n="err_choice">Elige una opción.</div>
+            </div>
+            <div class="field" data-req="motivacion">
+              <label for="motivacion" data-i18n="q_mot">¿Qué podrías aportar concretamente? Describe un entregable que sepas producir.</label>
+              <p class="hint" data-i18n="q_mot_h">Ej.: “Diseñar y construir con la comunidad un sistema de captación de agua lluvia para 10 familias, con manual de mantenimiento”.</p>
+              <textarea id="motivacion" name="motivacion" maxlength="1200"></textarea>
+              <div class="err" data-i18n="err_mot">Cuéntanos en al menos 40 caracteres.</div>
+            </div>
+            <div class="field" data-req="canal">
+              <label for="canal" data-i18n="q_canal">¿Cómo nos conociste?</label>
+              <select id="canal" name="canal">
+                <option value="" data-i18n="sel">Selecciona…</option>
+                <option value="universidad" data-i18n="ch1">Universidad</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="gremio" data-i18n="ch2">Asociación profesional / gremio</option>
+                <option value="referido" data-i18n="ch3">Exvoluntario/a o recomendación</option>
+                <option value="redes" data-i18n="ch4">Redes sociales</option>
+                <option value="buscador" data-i18n="ch5">Buscador (Google u otro)</option>
+                <option value="otro" data-i18n="ch6">Otro</option>
+              </select>
+              <div class="err" data-i18n="err_sel">Selecciona una opción.</div>
+            </div>
+          </fieldset>
+
+          <!-- PASO 4 -->
+          <fieldset class="fstep" data-step="4">
+            <h3 data-i18n="st4_t">Tus datos de contacto</h3>
+            <div class="row2">
+              <div class="field" data-req="firstname"><label for="firstname" data-i18n="q_name">Nombre</label><input type="text" id="firstname" name="firstname" autocomplete="given-name" /><div class="err" data-i18n="err_req">Campo obligatorio.</div></div>
+              <div class="field" data-req="lastname"><label for="lastname" data-i18n="q_last">Apellido</label><input type="text" id="lastname" name="lastname" autocomplete="family-name" /><div class="err" data-i18n="err_req">Campo obligatorio.</div></div>
+            </div>
+            <div class="field" data-req="email"><label for="email" data-i18n="q_email">Correo electrónico</label><input type="email" id="email" name="email" autocomplete="email" /><div class="err" data-i18n="err_email">Ingresa un correo válido.</div></div>
+            <div class="row2">
+              <div class="field" data-req="country"><label for="country" data-i18n="q_country">País de residencia</label><input type="text" id="country" name="country" list="paises" autocomplete="country-name" /><div class="err" data-i18n="err_req">Campo obligatorio.</div>
+                <datalist id="paises"><option>Alemania</option><option>España</option><option>Francia</option><option>Reino Unido</option><option>Países Bajos</option><option>Italia</option><option>Estados Unidos</option><option>Canadá</option><option>Chile</option><option>Ecuador</option><option>Colombia</option><option>México</option><option>Argentina</option><option>Perú</option></datalist>
+              </div>
+              <div class="field" data-req="edad"><label for="edad" data-i18n="q_age">Rango de edad</label>
+                <select id="edad" name="edad"><option value="" data-i18n="sel">Selecciona…</option><option value="18-24">18–24</option><option value="25-34">25–34</option><option value="35-44">35–44</option><option value="45-54">45–54</option><option value="55+">55+</option></select>
+                <div class="err" data-i18n="err_sel">Selecciona una opción.</div></div>
+            </div>
+            <div class="field" data-req="consent">
+              <label class="check"><input type="checkbox" id="consent" name="consent" /><span data-i18n="consent">Acepto que EWAO trate mis datos para evaluar mi postulación y contactarme sobre ella. Puedo pedir acceso, rectificación o eliminación en cualquier momento.</span></label>
+              <div class="err" data-i18n="err_consent">Necesitamos tu consentimiento para procesar la postulación.</div>
+            </div>
+            <label class="check"><input type="checkbox" id="optin" name="optin" /><span data-i18n="optin">(Opcional) Quiero recibir nuevas fichas de necesidad y oportunidades de colaboración remota.</span></label>
+            <p class="privacy" data-i18n="privacy">Casillas sin marcar por defecto. Datos tratados conforme a la Ley Orgánica de Protección de Datos Personales de Ecuador y al RGPD para residentes en la UE.</p>
+          </fieldset>
+
+          <div class="fnav">
+            <button type="button" class="btn btn-ghost" id="prevBtn" style="visibility:hidden" data-i18n="back">← Atrás</button>
+            <button type="button" class="btn btn-pri" id="nextBtn" data-i18n="next">Continuar →</button>
+            <button type="submit" class="btn btn-pri hidden" id="submitBtn" data-i18n="send">Enviar postulación</button>
+          </div>
+        </form>
+
+        <!-- RESULTADO -->
+        <div class="result hidden" id="result" aria-live="polite">
+          <span class="tag" id="resPersona"></span>
+          <h3 id="resTitle"></h3>
+          <div class="score"><div class="score__bar"><span id="scoreBar"></span></div><b id="scoreNum">0</b></div>
+          <p id="resText"></p>
+          <div class="next"><b data-i18n="res_next">Próximos pasos (automáticos):</b><ol id="resSteps"></ol></div>
+          <div class="passport">
+            <canvas id="qr" width="132" height="132" aria-label="Código QR del pasaporte"></canvas>
+            <div>
+              <small data-i18n="pass_l">Pasaporte de colaboración EWAO</small>
+              <div class="pid" id="passId">EWAO-VOL-0000</div>
+              <div style="font-size:.85rem;margin-top:4px" data-i18n="pass_p">Comparte tu QR: quien postule con él queda registrado como referido tuyo en la red de colaboradores.</div>
+              <div class="acts">
+                <button type="button" class="btn btn-pri" id="dlQr" data-i18n="pass_dl">Descargar QR</button>
+                <button type="button" class="btn btn-sec" id="cpLink" data-i18n="pass_cp">Copiar enlace</button>
+              </div>
+            </div>
+          </div>
+          <div class="demo-box hidden" id="demoBox">
+            <b data-i18n="demo_t">Modo demostración:</b> <span data-i18n="demo_p">HubSpot aún no está configurado en app.js. Este es el registro que se enviaría al CRM (guardado también en este navegador):</span>
+            <pre id="demoPayload"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5–8. RELACIONAR / REACTIVAR ============ -->
+<section id="despues">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="af_eyebrow">Después de la estancia</span>
+    <h2 data-i18n="af_h2">La colaboración no termina al volver</h2>
+    <p class="lead" data-i18n="af_lead">Quien regresa a su país puede seguir aportando desde allí. Así la experiencia presencial alimenta una red estable de capacidades para la comunidad.</p>
+    <div class="grid after">
+      <div class="card reveal"><span class="k" data-i18n="af1_k">Relacionar</span><h3 data-i18n="af1_t">Evaluación en ambos sentidos</h3><p data-i18n="af1_p">La comunidad evalúa el aporte y tú evalúas la organización. Ambos resultados alimentan la mejora del programa.</p><span class="st st-dev" data-i18n="st_dev">En desarrollo</span></div>
+      <div class="card reveal"><span class="k" data-i18n="af2_k">Reactivar</span><h3 data-i18n="af2_t">Red de exvoluntarios</h3><p data-i18n="af2_p">A los 90 días te invitamos a una tarea remota acorde a tu perfil y a compartir tu pasaporte con colegas.</p><span class="st st-proy" data-i18n="st_proy">Proyectado</span></div>
+      <div class="card reveal"><span class="k" data-i18n="af3_k">Continuar</span><h3>EWAO Open Collaboration</h3><p data-i18n="af3_p">Tareas remotas con contexto cultural y validación humana: traducir, diseñar, analizar datos, investigar mercados.</p><span class="st st-proy" data-i18n="st_proy">Proyectado</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Transparencia / Claim Registry ============ -->
+<section id="transparencia">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="t_eyebrow">Comunicamos solo lo demostrable</span>
+    <h2 data-i18n="t_h2">Registro de afirmaciones</h2>
+    <p class="lead" data-i18n="t_lead">Cada afirmación de esta página tiene un estado y una evidencia. Seguimos la Directiva (UE) 2024/825: sin afirmaciones ambientales genéricas ni “impacto” que no podamos verificar.</p>
+    <div class="legend">
+      <span class="st st-ok" data-i18n="st_ok">Realizado</span>
+      <span class="st st-dev" data-i18n="st_dev">En desarrollo</span>
+      <span class="st st-proy" data-i18n="st_proy">Proyectado</span>
+    </div>
+    <div class="tbl-wrap">
+      <table class="claims">
+        <thead><tr><th>ID</th><th data-i18n="th_claim">Afirmación</th><th data-i18n="th_state">Estado</th><th data-i18n="th_ev">Evidencia (Evidence Hub)</th></tr></thead>
+        <tbody>
+          <tr><td>CL-01</td><td data-i18n="cl1">El programa cuenta con un Procedimiento Operativo Estándar (SOP) que regula costos, riesgos, tamaño de los grupos y frentes de trabajo.</td><td><span class="st st-ok" data-i18n="st_ok">Realizado</span></td><td data-i18n-html="cl1_e">SOP del programa, aprobado internamente <small>(Informe de respaldo EWAO, 2026; disponible a solicitud)</small></td></tr>
+          <tr><td>CL-02</td><td data-i18n="cl2">Las comunidades de acogida validaron los frentes de trabajo iniciales.</td><td><span class="st st-ok" data-i18n="st_ok">Realizado</span></td><td data-i18n-html="cl2_e">Informe de respaldo, sección “Estado actual de implementación” <small>(Luje, 2026)</small></td></tr>
+          <tr><td>CL-03</td><td data-i18n="cl3">La contribución estándar es USD 250 por semana e incluye alojamiento, alimentación, coordinación, traducción y materiales.</td><td><span class="st st-ok" data-i18n="st_ok">Realizado</span></td><td data-i18n-html="cl3_e">Booklet “Programa de Voluntariado Profesional 2026” <small>(EWAO, 2026)</small></td></tr>
+          <tr><td>CL-04</td><td data-i18n="cl4">El 70% de la contribución se destina a la economía local.</td><td><span class="st st-dev" data-i18n="st_dev">En desarrollo</span></td><td data-i18n-html="cl4_e">Diseño financiero del SOP. <small>Se verificará con el informe financiero del grupo piloto.</small></td></tr>
+          <tr><td>CL-05</td><td data-i18n="cl5">Grupo piloto de 6 a 10 participantes y escalamiento a 3–4 grupos por año.</td><td><span class="st st-proy" data-i18n="st_proy">Proyectado</span></td><td data-i18n-html="cl5_e">Plan operativo del informe de respaldo. <small>Sujeto a capacidad del territorio y financiamiento.</small></td></tr>
+          <tr><td>CL-06</td><td data-i18n="cl6">Red de exvoluntarios y EWAO Open Collaboration.</td><td><span class="st st-proy" data-i18n="st_proy">Proyectado</span></td><td data-i18n-html="cl6_e">Propuesta conjunta Grupo 04 y Grupo 06 <small>(UDD, 2026)</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid rules">
+      <div class="card"><b data-i18n="r1_t">Sin asistencialismo</b><span data-i18n="r1_p">Hablamos de colaboración y aprendizaje mutuo, no de “ayudar”.</span></div>
+      <div class="card"><b data-i18n="r2_t">Sin exotismo</b><span data-i18n="r2_p">Imágenes y relatos solo con autorización de la comunidad.</span></div>
+      <div class="card"><b data-i18n="r3_t">Sin greenwashing</b><span data-i18n="r3_p">Nada de “sostenible” o “carbono neutral” sin evidencia certificable.</span></div>
+      <div class="card"><b data-i18n="r4_t">Saberes protegidos</b><span data-i18n="r4_p">Proyectos que tocan conocimiento tradicional activan un protocolo de consentimiento y devolución de resultados.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="fq_eyebrow">Preguntas frecuentes</span>
+    <h2 data-i18n="fq_h2">Lo que más nos preguntan</h2>
+    <div class="faq">
+      <details><summary data-i18n="fq1">¿Por qué tengo que pagar si voy a aportar mi trabajo?</summary><p data-i18n="fa1x">Porque recibirte tiene costos reales (alimentación, alojamiento, traslados internos, coordinación, traducción). Si no se cubren, la carga recae sobre la comunidad. No es una donación ni una tarifa turística: cubre la operación de tu estancia.</p></details>
+      <details><summary data-i18n="fq2">¿Necesito visa?</summary><p data-i18n="fa2x">Depende de tu nacionalidad y duración. Ecuador contempla una visa de residencia temporal para voluntariado vinculada a organizaciones reconocidas; exige pasaporte vigente, antecedentes penales apostillados y acreditación de medios de vida. En el onboarding te guiamos según tu caso.</p></details>
+      <details><summary data-i18n="fq3">¿Necesito hablar español?</summary><p data-i18n="fa3x">Ayuda mucho, pero no es excluyente. El programa incluye traducción y mediación intercultural. Tu nivel de idioma se usa para preparar materiales y la entrevista.</p></details>
+      <details><summary data-i18n="fq4">¿Es seguro?</summary><p data-i18n="fa4x">Trabajamos con protocolos de emergencia, seguro médico y de evacuación obligatorio y coordinación local permanente. El territorio es remoto: te explicamos con honestidad sus condiciones antes de que decidas.</p></details>
+      <details><summary data-i18n="fq5">¿Puedo colaborar sin viajar?</summary><p data-i18n="fa5x">Sí. Elige la ruta de colaboración remota en el formulario. Recibirás tareas con alcance claro según tu perfil, sin costo.</p></details>
+      <details><summary data-i18n="fq6">¿Puedo tomar fotos o publicar sobre mi estancia?</summary><p data-i18n="fa6x">Solo con la autorización de la comunidad y siguiendo el acuerdo de convivencia. Las imágenes y los saberes del territorio pertenecen a la comunidad.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 data-i18n="fin_h2">¿Tu capacidad encaja con una necesidad?</h2>
+    <p data-i18n="fin_p">Postula en 4 minutos. Si hoy no hay una ficha compatible, te avisaremos cuando la comunidad abra una.</p>
+    <a href="#postular" class="btn btn-pri" data-cta="final_postular" data-i18n="cta_apply2">Postular ahora</a>
+  </div>
+</section>
+
+<!-- Mini CRM de demostración: visible con #crm-demo en la URL -->
+<section id="crm-demo" class="hidden">
+  <div class="wrap">
+    <h2>Mini CRM (demo local)</h2>
+    <p class="lead">Postulaciones guardadas en este navegador mientras HubSpot no está conectado. Útil para la demo en vivo.</p>
+    <div class="tbl-wrap"><table><thead><tr><th>Fecha</th><th>Pasaporte</th><th>Nombre</th><th>País</th><th>Modalidad</th><th>Área</th><th>Persona</th><th>Score</th><th>Ruta</th><th>Canal</th><th>Referido por</th></tr></thead><tbody id="crmRows"></tbody></table></div>
+    <p style="margin-top:14px"><button class="btn btn-ghost" id="crmExport" type="button">Exportar CSV</button> <button class="btn btn-ghost" id="crmClear" type="button">Borrar datos demo</button></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="img/logo.png" alt="EWAO Project" width="156" height="42" style="margin-bottom:14px" />
+        <p data-i18n="ft_p">El Voluntariado Profesional es una línea del Modelo EWAO, desarrollado junto a la Asociación Keweriono en territorio Waorani, Amazonía ecuatoriana.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft_c">Contacto</h4>
+        <ul><li><a href="mailto:voluntario@ewaoproject.com">voluntario@ewaoproject.com</a></li><li><a href="mailto:info@ewaoproject.com">info@ewaoproject.com</a></li><li><a href="https://ewaoproject.com/" data-cta="footer_web">ewaoproject.com</a></li></ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft_l">En esta página</h4>
+        <ul><li><a href="#necesidades" data-i18n="nav_need">Necesidades</a></li><li><a href="#contribucion" data-i18n="nav_price">Contribución</a></li><li><a href="#transparencia" data-i18n="nav_trans">Transparencia</a></li><li><a href="#postular" data-i18n="cta_apply">Postular</a></li></ul>
+      </div>
+    </div>
+    <div class="foot__base" data-i18n="ft_b">© 2026 EWAO Project · Prototipo académico, no oficial, desarrollado por el Grupo 04 (Voluntariado) — Marketing Internacional UDD, para su adopción por EWAO y la Asociación Keweriono.</div>
+  </div>
+</footer>
+
+<script src="qr.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
